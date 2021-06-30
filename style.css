@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fauna+One&family=Playfair+Display:wght@400;500;700&display=swap');
+
+
+html {
+  height: 100%;
+}
+body {
+  height: 100vh;
+  font-family: 'Fauna One', serif;
+}
+
+.hedingsfont{
+  font-family: 'Playfair Display', serif;
+}
+
+
+#SideAni{
+  min-width:100%;
+  width: 25%;
+  height: 100%;
+}
+
+#intro
+{
+  background-color: #4a4e69;
+  color: #f1faee;
+  height: 100%;
+  
+  margin-left: 0;
+  margin-top: 0;
+}
+.mainnavbar a:visited{
+  color: #f1faee;
+
+}
+.mainnavbar a:link{
+  color: #f1faee;
+}
+
+.mainnavbar{
+  color: #f1faee;
+}
+
+#introcontainer{
+  
+  min-height: 100% !important;
+  height: 100%;
+  
+}
+
+#prjcts{
+  background-color: #a2d2ff;
+}
+
+#nvbreles{
+  color: #fff;
+}
+
+
+#introrow{
+  min-height: 100% !important;
+  height: 100%;
+}
+
+#introcon{
+  min-height: 100% !important;
+  padding: auto;
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  
+}
+
+#cntctcon{
+  padding-top: 10vh;
+  height: 20vh;
+}
+
+#cntct{
+  height: 75vh;
+  background-color: cornsilk;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column ;
+  
+}
+#contacts{
+  align-items: center; 
+  display: flex;
+  justify-content: center;
+  width: 100vh;
+  margin: auto;
+  min-height: 50vh;
+
+}
+
+#ChessImgBorder{
+  position: relative;
+  display: flex;
+  top: 1.5%;
+  margin: auto;
+  padding: auto;
+  z-index: 3;
+  width: 3vh;
+}
+
+#icon1,#icon2,#icon3,#icon4{
+  font-size: 1.3rem;
+  margin-left: 2vh;
+  color: cornflowerblue;
+}
+#icon1:hover,#icon2:hover,#icon3:hover,#icon4:hover{
+  color: coral !important;
+  
+}
+
+
+.scrollingActive{
+  background-color: #edf2f4;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+  width: 100vh;
+}
+
+.scrollingActive a:visited{
+  color: #1d3557;
+
+}
+.scrollingActive a:link{
+  color: #1d3557;
+}

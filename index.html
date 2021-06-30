@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="icon" href="/Logo.png">
+
+    <title>Me</title>
+  </head>
+  <body>
+    <header class="">
+      <nav class="navbar fixed-top navbar-light w-100 float-right ms-auto mainnavbar" id = "nvbreles">
+        <div class="container me-0 w-50">
+          <a class="navbar-brand" href="#introcontainer">Home</a>
+          <a class="navbar-brand" href="#aboutmecontainer">About Me</a>
+          <a class="navbar-brand" href="#prjcts">Projects</a>
+          <a class="navbar-brand" href="#cntctmecon">Contact Me</a>
+          <a class="navbar-brand" href="javascript:void(0)" onclick="doingClick();">Resume</a>
+    
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-fluid mx-0 px-0 h-100" id="introcontainer">
+      <div class="row" id="introrow">
+        <div class="col-3 mx-0 px-0">
+          <div id="SideAni"></div>
+        </div>
+        <div class="col-9" id="intro">
+          <div class="container" id="introcon">
+            <div>
+              <h1 class="text hedingsfont" style="font-size: 15vh;">Divyansh Mittal</h1>
+              <p class="text">
+                Sophomore at IITD pursuing computer science as my major
+              </p>
+              <hr />
+              <a class="text-light" href="https://github.com/DivyanshMittal-exe/"
+                ><i class="bi bi-github" id="icon1"></i
+              ></a>
+
+              <a class="text-light" href="https://www.instagram.com/higgsboson.m/"
+                ><i
+                  class="bi bi-instagram"
+                  id="icon2"
+                  style="font-size: 1.3rem; color: cornflowerblue"
+                ></i
+              ></a>
+
+              <a class="text-light" href="https://www.linkedin.com/in/divyansh-mittal-a910931ba/"
+                ><i
+                  class="bi bi-linkedin"
+                  id="icon3"
+                  style="font-size: 1.3rem; color: cornflowerblue"
+                ></i
+              ></a>
+              <a class="text-light" href="https://www.facebook.com/divyansh.mittal.10/"
+                ><i
+                  class="bi bi-facebook"
+                  id="icon4"
+                  style="font-size: 1.3rem; color: cornflowerblue"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Me Section -->
+
+    <div class="container-fluid m-0 p-0 h-50 align-middle" id="aboutmecontainer">
+      <div class="row h-100">
+        <div class="col-5">
+          <div class="d-flex flex-column justify-content-center h-100">
+            <h1 class="text-center hedingsfont">About Me</h1>
+          </div>
+        </div>
+        <div class="col-6 d-flex flex-column justify-content-center pe-2">
+          <p class="text-left">
+            I am currently pursuing my B.Tech at the Indian Institute of
+            Technology, Delhi with Computer Science as my major. I
+            am  19 years old and am a programming enthusiast,who loves to explore and learn
+            cool stuff.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Projects Section -->
+
+
+    <div class="container-fluid m-0 p-0 h-100 align-middle" id = "prjcts">
+      <div class="row h-100">
+        <div class="col-6">
+          <div class="d-flex flex-column justify-content-center h-100">
+            <h1 class="text-center hedingsfont">Projects</h1>
+          </div>
+        </div>
+        <div class="col-6 d-flex flex-column justify-content-center">
+          <div class="row row-cols-1 row-cols-md-2 g-4 me-1">
+            <div class="col">
+              <!-- <img src="Chess.png" id = "ChessImgBorder" /> -->
+              <div class="card border border-primary border-2">
+                <img
+                  src="https://images.unsplash.com/photo-1604948501466-4e9c339b9c24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlc3N8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Py Chess Bot</h5>
+                  <p class="card-text">
+                    Created a chess palying bot in python with min-max search
+                    algorithm and alpha beta pruning along with iterative
+                    deepening.
+                  </p>
+                  <p class="card-text">
+                    Also added a database of 1,80,000+ games played by GMs to
+                    enhance the funcionaliy of the bot.
+                  </p>
+                  <a
+                    class="btn btn-primary w-100"
+                    href="https://github.com/DivyanshMittal-exe/PyChess"
+                    role="button"
+                    ><i class="bi bi-github"></i
+                      > Tell me more</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Me -->
+
+    <div class="container-fluid m-0 p-0 h-75 align-middle" id = "cntctmecon">
+      <div id="cntct">
+        <div class="d-flex justify-content-center my-auto">
+          <h1 class="hedingsfont">Contact Me</h1>
+        </div>
+
+        <div class="row" id="contacts">
+          <div class="col-sm-4 d-flex flex-column justify-content-center">
+            <a class="text-center" href="javascript:void(0)" onclick="doingClick();"
+              ><i
+                class="bi bi-house-fill fa-fw fa-2x"
+                style="font-size: 3rem; color: cornflowerblue"
+              ></i
+            ></a>
+            <p class="text-center">Shivalik Hostel,IIT Delhi</p>
+          </div>
+          <div class="col-sm-4 d-flex flex-column justify-content-center">
+            <a class="text-center" href="mailto:cs1200342@iitd.cse.ac.in"
+              ><i
+                class="bi bi-mailbox2 fa-fw bi-2x"
+                style="font-size: 3rem; color: cornflowerblue"
+              ></i
+            ></a>
+            <p class="text-center">cs1200342@iitd.cse.ac.in</p>
+          </div>
+          <div class="col-sm-4 d-flex flex-column justify-content-center">
+            <a class="text-center" href="javascript:void(0)" onclick="doingClick();"
+              ><i
+                class="bi bi-telephone-fill"
+                style="font-size: 3rem; color: cornflowerblue"
+              ></i
+            ></a>
+            <p class="text-center">+91 XXX XXX XXXX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const navbar = document.querySelector(".mainnavbar");
+      window.onscroll = () => {
+        if (window.scrollY > 0) {
+          navbar.classList.add("scrollingActive");
+        } else {
+          navbar.classList.remove("scrollingActive");
+        }
+      };
+    </script>
+  </body>
+</html>
