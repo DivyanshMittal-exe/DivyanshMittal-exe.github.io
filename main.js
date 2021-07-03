@@ -34,3 +34,8 @@ function draw(){
     }
 }
 
+function windowResized() {
+    var Height = document.getElementById('SideAni').offsetHeight;
+    var Width = document.getElementById('SideAni').clientWidth ;
+    resizeCanvas(Width, Height);
+  }

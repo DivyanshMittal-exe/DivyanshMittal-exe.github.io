@@ -120,6 +120,7 @@ body {
   background-color: #edf2f4;
   box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
   width: 100vh;
+  
 }
 
 .scrollingActive a:visited{
@@ -128,4 +129,14 @@ body {
 }
 .scrollingActive a:link{
   color: #1d3557;
+}
+
+#navbarNavAltMarkup{
+  margin-left: auto;
+  padding-left: auto;
+  width: 100%;
+}
+
+.hiddenElement{
+  display: none;
 }
