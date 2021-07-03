@@ -38,4 +38,8 @@ function windowResized() {
     var Height = document.getElementById('SideAni').offsetHeight;
     var Width = document.getElementById('SideAni').clientWidth ;
     resizeCanvas(Width, Height);
+     background('rgb(41, 50, 65)');
+     x = 0;
+    y = 0;
+
   }
