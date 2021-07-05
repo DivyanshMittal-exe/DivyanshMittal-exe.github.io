@@ -49,7 +49,7 @@ body {
 }
 
 #prjcts{
-  background-color: #a2d2ff;
+  background-color: #9DD1F1;
 }
 
 #nvbreles{
@@ -77,8 +77,8 @@ body {
 }
 
 #cntct{
-  height: 75vh;
-  background-color: cornsilk;
+  
+  background-color: #333648;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -91,7 +91,7 @@ body {
   justify-content: center;
   width: 100vh;
   margin: auto;
-  min-height: 50vh;
+  
 
 }
 
@@ -111,6 +111,17 @@ body {
   color: cornflowerblue;
 }
 #icon1:hover,#icon2:hover,#icon3:hover,#icon4:hover{
+  color: coral !important;
+  
+}
+
+.limks{
+  font-size: 0.7rem; 
+  color: #ff9505;
+  mix-blend-mode: difference;
+}
+
+.limks:hover{
   color: coral !important;
   
 }
@@ -139,4 +150,43 @@ body {
 
 .hiddenElement{
   display: none;
+}
+
+#NavDiv{
+  height: 100vh;
+  margin-top: auto;
+}
+
+.NavList{
+  animation: slideInRight;
+  animation-duration: 1s;
+  mix-blend-mode: screen;
+}
+
+.navname{
+  display: none;
+  color: #001427;
+  font-size: 0.9rem; 
+  mix-blend-mode: screen;
+}
+
+/* .limks:hover + .navname{
+  display: block;
+} */
+
+#abtmehead{
+  display:none;
+}
+
+.bi-circle-fill{
+  mix-blend-mode: screen;
+} 
+circle { mix-blend-mode: screen; }
+
+
+#SideAniDiv{
+  width: 25vw;
+   height:100vw;
+   position: fixed;
+   z-index: -20;
 }
