@@ -5,8 +5,8 @@ var spacing = 20;
 function setup(){
 
     var Height = document.getElementById('SideAni').offsetHeight;
-    var Width = document.getElementById('SideAni').clientWidth ;
-    let canvas = createCanvas(Width,Height );
+    var Width = document.getElementById('SideAni').offsetWidth ;
+    let canvas = createCanvas(1.01*Width,Height );
     console.log(window.innerHeight);
     console.log(self.innerHeight);
     console.log(parent.innerHeight);
