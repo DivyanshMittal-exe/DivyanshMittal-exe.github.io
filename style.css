@@ -121,10 +121,10 @@ body {
   mix-blend-mode: difference;
 }
 
-.limks:hover{
+/* .limks:hover{
   color: coral !important;
   
-}
+} */
 
 
 .scrollingActive{
@@ -139,6 +139,21 @@ body {
 
 }
 .scrollingActive a:link{
+  color: #1d3557;
+}
+
+.scrollingActive2{
+  background-color: #edf2f4;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+  width: 100vh;
+  
+}
+
+.scrollingActive2 a:visited{
+  color: #1d3557;
+
+}
+.scrollingActive2 a:link{
   color: #1d3557;
 }
 
@@ -178,11 +193,6 @@ body {
   display:none;
 }
 
-.bi-circle-fill{
-  mix-blend-mode: screen;
-} 
-circle { mix-blend-mode: screen; }
-
 
 #SideAniDiv{
   width: 25vw;
@@ -190,3 +200,51 @@ circle { mix-blend-mode: screen; }
    position: fixed;
    z-index: -20;
 }
+
+.Hamburger{
+  background-color: transparent;
+  border: 0;
+  color: #000;
+  font: 1em sans-serif;
+  display: none;
+}
+
+#collapsedButton{
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font: 2rem sans-serif;
+  display: flex;
+  align-items: flex-end;
+  display: none;
+}
+#navbarNavAltMarkup{
+  width: 100vw;
+  display:flex;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.NavBarLinks{
+  display: flex;
+}
+
+
+
+@media screen and (max-width:991px) {
+    .NavBarLinks{
+      display: none;
+    }
+
+    .NavBarLinks.showNav{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex:1;
+    }
+    #collapsedButton{
+      display: block;
+    }
+
+}
+

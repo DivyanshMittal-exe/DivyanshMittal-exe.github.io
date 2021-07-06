@@ -1,11 +1,15 @@
-// const navbar = document.querySelector(".mainnavbar");
-//       window.onscroll = () => {
-//         if (window.scrollY > 0) {
-//           navbar.classList.add("scrollingActive");
-//         } else {
-//           navbar.classList.remove("scrollingActive");
-//         }
-//       };
+const hamburger = document.getElementById("collapsedButton");
+
+const navbar = document.querySelector(".mainnavbar");
+      window.onscroll = () => {
+        if (window.scrollY > 0) {
+          navbar.classList.add("scrollingActive");
+          hamburger.style.color = "black";
+        } else {
+          navbar.classList.remove("scrollingActive");
+          hamburger.style.color = "white";
+        }
+      };
 
 
 
@@ -68,3 +72,28 @@ document.addEventListener('scroll', function () {
         
 
 });
+
+
+
+
+const NavLinks = document.getElementById("NavBarLinks");
+
+hamburger.addEventListener ('click',()=>{
+    console.log("clickes");
+    NavLinks.classList.toggle("showNav");
+    navbar.classList.toggle("scrollingActive2");
+    
+    // if (NavLinks.style.display != "none") {
+    //     console.log("Hi");
+    //     navbar.classList.add("scrollingActive");
+    //   }else{
+    //     navbar.classList.remove("scrollingActive");
+    //   }
+    
+});
+
+// data-bs-toggle="collapse"
+//             data-bs-target="#navbarNavAltMarkup"
+//             aria-controls="navbarNavAltMarkup"
+//             aria-expanded="false"
+//             aria-label="Toggle navigation"

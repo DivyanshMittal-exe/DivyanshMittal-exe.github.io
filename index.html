@@ -25,73 +25,54 @@
     <title>Me</title>
   </head>
   <body>
-    <header style="overflow: hidden;">
-      <nav class="position-fixed w-100 h-100">
+    <header style="overflow: hidden">
+      <nav class="position-fixed w-100 h-100" style="display: none;">
         <div class="d-flex justify-content-end h-100">
           <ul class="NavList my-auto me-4" style="list-style-type: none">
             <li class="py-2">
               <div class="d-flex justify-content-end">
-                <div class="pe-5 navname">
-                  Home
-                </div>
-                 
-              
-              <a href="#introcontainer" class="limks">
-                
-                <i
-                  class="bi bi-circle-fill limks"
-                ></i>
-              </a>
-            </div>
-            </li>
-            <li  class="py-2">
-              <div class="d-flex justify-content-end">
-                <div class="pe-5 navname">
-                  About Me
-                </div>
-              <a href="#aboutmecontainer" class="limks">
-                <i
-                  class="bi bi-circle-fill limks"
-                ></i>
-              </a>
-            </div>
-            </li>
-            <li  class="py-2">
-              <div class="d-flex justify-content-end">
-                <div class="pe-5 navname">
-                  Projects
-                </div>
-              <a href="#prjcts" class="limks">
-                <i
-                  class="bi bi-circle-fill limks"
-                ></i>
-              </a>
-            </div>
-            </li>
-            <li  class="py-2">
-              <div class="d-flex justify-content-end">
-                <div class="pe-5 navname">
-                  Contact Me
-                </div>
-              <a href="#cntctmecon" class="limks">
-                <i
-                  class="bi bi-circle-fill limks"
-                ></i>
-              </a>
-            </div>
-            </li><li  class="py-2">
-              <div class="d-flex justify-content-end">
-                <div class="pe-5 navname">
-                  Resume
-                </div>
-              <a href="javascript:void(0)" onclick="doingClick();" class="limks">
-                <i 
-                  class="bi bi-circle-fill limks"
-                  
-                ></i>
-              </a>
-            </div>
+                <div class="pe-5 navname">Home</div>
 
+                <a href="#introcontainer" class="limks">
+                  <i class="bi bi-circle-fill limks"></i>
+                </a>
+              </div>
+            </li>
+            <li class="py-2">
+              <div class="d-flex justify-content-end">
+                <div class="pe-5 navname">About Me</div>
+                <a href="#aboutmecontainer" class="limks">
+                  <i class="bi bi-circle-fill limks"></i>
+                </a>
+              </div>
+            </li>
+            <li class="py-2">
+              <div class="d-flex justify-content-end">
+                <div class="pe-5 navname">Projects</div>
+                <a href="#prjcts" class="limks">
+                  <i class="bi bi-circle-fill limks"></i>
+                </a>
+              </div>
+            </li>
+            <li class="py-2">
+              <div class="d-flex justify-content-end">
+                <div class="pe-5 navname">Contact Me</div>
+                <a href="#cntctmecon" class="limks">
+                  <i class="bi bi-circle-fill limks"></i>
+                </a>
+              </div>
+            </li>
+            <li class="py-2">
+              <div class="d-flex justify-content-end">
+                <div class="pe-5 navname">Resume</div>
+                <a
+                  href="javascript:void(0)"
+                  onclick="doingClick();"
+                  class="limks"
+                >
+                  <i class="bi bi-circle-fill limks"></i>
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -140,6 +121,48 @@
         </div>
       </nav> -->
 
+      <nav
+        class="
+          navbar navbar-expand-lg
+          fixed-top
+          navbar-light
+          w-100
+          float-right
+          ms-auto
+          mainnavbar
+        "
+        id="nvbreles"
+      >
+        <div class="container w-100">
+          <button
+            class="Haburger ms-auto"
+            type="button"
+            
+            id="collapsedButton"
+          >
+
+          <i class="bi bi-justify"></i>
+              
+           
+          </button>
+          
+          <div
+            class="collapse navbar-collapse mainnavbar "
+            id="navbarNavAltMarkup"
+          >
+
+            <div  class = "NavBarLinks" id = "NavBarLinks">
+            <a class="nav-item nav-link" href="#introcontainer">Home</a>
+            <a class="nav-item nav-link" href="#aboutmecontainer">About Me</a>
+            <a class="nav-item nav-link" href="#prjcts">Projects</a>
+            <a class="nav-item nav-link" href="#cntctmecon">Contact Me</a>
+            <a class="nav-item nav-link" href="javascript:void(0)" onclick="doingClick();">Resume</a>
+          </div>
+        </div>  
+          </div>
+        </div>
+      </nav>
+
       <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a class="navbar-brand" href="#"
           ><span style="display: none">Hidden</span></a
@@ -173,12 +196,12 @@
     </header>
 
     <div
-      class="container-fluid mx-0 px-0 h-100"
+      class="container-fluid mx-0 px-0 "
       id="introcontainer"
       style="overflow: hidden"
     >
       <div class="row" id="introrow">
-        <div class="col-3 mx-0 px-0" id = "SideAniDiv">
+        <div class="col-3 mx-0 px-0" id="SideAniDiv">
           <div id="SideAni"></div>
         </div>
         <div class="col-3 mx-0 px-0">
@@ -197,7 +220,11 @@
               <a
                 class="text-light"
                 href="https://github.com/DivyanshMittal-exe/"
-                ><i class="bi bi-github" id="icon1"></i
+                ><i 
+                class="bi bi-github" 
+                id="icon1"
+                style="font-size: 1.3rem; color: cornflowerblue"
+                ></i
               ></a>
 
               <a
@@ -239,12 +266,12 @@
     <div
       class="container-fluid m-0 p-0 h-50 align-middle"
       id="aboutmecontainer"
-      style="background-color: #f4f4f6;"
+      style="background-color: #f4f4f6"
     >
       <div class="row h-100">
         <div class="col-5">
           <div class="d-flex flex-column justify-content-center h-100">
-            <h1 class="text-center hedingsfont" id = "abtmehead">About Me</h1>
+            <h1 class="text-center hedingsfont" id="abtmehead">About Me</h1>
           </div>
         </div>
         <div class="col-6 d-flex flex-column justify-content-center pe-2">
@@ -322,7 +349,7 @@
     <!-- Contact Me -->
 
     <div class="container-fluid m-0 p-0 align-middle" id="cntctmecon">
-      <div id="cntct" style="color: #EEF5DB;">
+      <div id="cntct" style="color: #eef5db">
         <div class="d-flex justify-content-center my-auto">
           <h1 class="hedingsfont mt-2">Contact Me</h1>
         </div>
@@ -335,7 +362,7 @@
               onclick="doingClick();"
               ><i
                 class="bi bi-house-fill fa-fw fa-2x"
-                style="font-size: 3rem; color: #EEF5DB"
+                style="font-size: 3rem; color: #eef5db"
               ></i
             ></a>
             <p class="text-center">Shivalik Hostel,IIT Delhi</p>
@@ -344,7 +371,7 @@
             <a class="text-center" href="mailto:cs1200342@iitd.cse.ac.in"
               ><i
                 class="bi bi-mailbox2 fa-fw bi-2x"
-                style="font-size: 3rem; color: #EEF5DB"
+                style="font-size: 3rem; color: #eef5db"
               ></i
             ></a>
             <p class="text-center">cs1200342@iitd.cse.ac.in</p>
@@ -356,7 +383,7 @@
               onclick="doingClick();"
               ><i
                 class="bi bi-telephone-fill"
-                style="font-size: 3rem; color: #EEF5DB"
+                style="font-size: 3rem; color: #eef5db"
               ></i
             ></a>
             <p class="text-center">+91 XXX XXX XXXX</p>
@@ -364,81 +391,73 @@
         </div>
 
         <div class="container-fluid">
-          <hr class="rgba-white-light" style="margin: 0 15%;">
-      
-         
-          <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-      
-           
+          <hr class="rgba-white-light" style="margin: 0 15%" />
+
+          <div
+            class="row d-flex text-center justify-content-center mb-md-0 mb-4"
+          >
             <div class="col-md-8 col-12 mt-5">
-              <p style="line-height: 1.7rem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo maiores necessitatibus id aliquam aspernatur voluptatibus illo accusantium at. Eum inventore quam nam, iste expedita et maiores enim cumque tenetur fuga.</p>
+              <p style="line-height: 1.7rem">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+                maiores necessitatibus id aliquam aspernatur voluptatibus illo
+                accusantium at. Eum inventore quam nam, iste expedita et maiores
+                enim cumque tenetur fuga.
+              </p>
             </div>
-           
-      
           </div>
-         
-          <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
-      
-         
+
+          <hr
+            class="clearfix d-md-none rgba-white-light"
+            style="margin: 10% 15% 5%"
+          />
+
           <div class="row pb-3">
-      
-           
             <div class="col-md-12">
-      
-              <div class=" d-flex text-center justify-content-center">
-      
+              <div class="d-flex text-center justify-content-center">
                 <a
-                class="text-light"
-                href="https://github.com/DivyanshMittal-exe/"
-                ><i class="bi bi-github" id="icon1"></i
-              ></a>
+                  class="text-light"
+                  href="https://github.com/DivyanshMittal-exe/"
+                  ><i class="bi bi-github" id="icon1"></i
+                ></a>
 
-              <a
-                class="text-light"
-                href="https://www.instagram.com/higgsboson.m/"
-                ><i
-                  class="bi bi-instagram"
-                  id="icon2"
-                  style="font-size: 1.3rem; color: cornflowerblue"
-                ></i
-              ></a>
+                <a
+                  class="text-light"
+                  href="https://www.instagram.com/higgsboson.m/"
+                  ><i
+                    class="bi bi-instagram"
+                    id="icon2"
+                    style="font-size: 1.3rem; color: cornflowerblue"
+                  ></i
+                ></a>
 
-              <a
-                class="text-light"
-                href="https://www.linkedin.com/in/divyansh-mittal-a910931ba/"
-                ><i
-                  class="bi bi-linkedin"
-                  id="icon3"
-                  style="font-size: 1.3rem; color: cornflowerblue"
-                ></i
-              ></a>
-              <a
-                class="text-light"
-                href="https://www.facebook.com/divyansh.mittal.10/"
-                ><i
-                  class="bi bi-facebook"
-                  id="icon4"
-                  style="font-size: 1.3rem; color: cornflowerblue"
-                ></i
-              ></a>
-      
+                <a
+                  class="text-light"
+                  href="https://www.linkedin.com/in/divyansh-mittal-a910931ba/"
+                  ><i
+                    class="bi bi-linkedin"
+                    id="icon3"
+                    style="font-size: 1.3rem; color: cornflowerblue"
+                  ></i
+                ></a>
+                <a
+                  class="text-light"
+                  href="https://www.facebook.com/divyansh.mittal.10/"
+                  ><i
+                    class="bi bi-facebook"
+                    id="icon4"
+                    style="font-size: 1.3rem; color: cornflowerblue"
+                  ></i
+                ></a>
               </div>
-      
             </div>
-            
-      
           </div>
-          
-      
         </div>
-        
+
         <div class="footer-copyright text-center py-3">
           Designed and developed by Divyansh Mittal
         </div>
       </div>
-      
     </div>
-
 
     <script src="main.js"></script>
     <script src="other.js"></script>
@@ -449,6 +468,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    
+    <script src="jquery-3.6.0.min.js"></script>
   </body>
 </html>
