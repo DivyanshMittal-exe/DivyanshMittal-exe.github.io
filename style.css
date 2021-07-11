@@ -3,10 +3,12 @@
 
 html {
   height: 100%;
+  
 }
 body {
   height: 100vh;
   font-family: 'Fauna One', serif;
+  background-color: #4a4e69;
 }
 
 .hedingsfont{
@@ -50,6 +52,7 @@ body {
 
 #prjcts{
   background-color: #9DD1F1;
+  /* min-height: 100vh; */
 }
 
 #nvbreles{
@@ -60,6 +63,8 @@ body {
   background-color: #101218;
   color:#edf2f4;
 }
+
+
 
 
 #introrow{
@@ -193,11 +198,14 @@ body {
 /* .limks:hover + .navname{
   display: block;
 } */
-
+#endfancys{
+  width: 100vw;
+}
 
 #endfancys h1{
   margin: 0.3rem;
   position: relative;
+ font-size: 1.8rem;
 }
 
 
@@ -221,7 +229,9 @@ body {
 }
 
 
-
+.prjctrow{
+  height: 100%;
+}
 
 
 #abtmehead{
@@ -231,7 +241,7 @@ body {
 
 #SideAniDiv{
   width: 25vw;
-   height:100vw;
+   height:100vh;
    position: fixed;
    z-index: -20;
 }
@@ -264,22 +274,61 @@ body {
   display: flex;
 }
 
+.item {
+  transition: all 300ms ease;
+}
 
 
-@media screen and (max-width:991px) {
-    .NavBarLinks{
-      display: none;
-    }
 
-    .NavBarLinks.showNav{
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      flex:1;
-    }
-    #collapsedButton{
-      display: block;
-    }
+.nameme{
+  font-size: 7rem;
+}
+
+@media screen and (max-width:630px) {
+  #SideAniDiv{
+    width: 100vw;
+    height:25vh;
+    display: block;
+    position: relative;
+  }
+
+  #hiddenintroelement{
+    display: none;
+  }
+  #intro{
+    width: 100vw;
+  }
+
 
 }
+@media screen and (max-width:991px) {
+  .NavBarLinks{
+    display: none;
+  }
+
+  .NavBarLinks.showNav{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex:1;
+  }
+  #collapsedButton{
+    display: block;
+  }
+  #endfancys{
+    width: 100%;
+  }
+  #endfancys h1{
+    margin: 0.7vw;
+    position: relative;
+   font-size: 4vw;
+  }
+  .nameme{
+    font-size: 11vw;
+  }
+  
+}
+
+
+
 
