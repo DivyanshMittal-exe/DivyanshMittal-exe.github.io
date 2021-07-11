@@ -56,6 +56,11 @@ body {
   color: #fff;
 }
 
+#skills{
+  background-color: #101218;
+  color:#edf2f4;
+}
+
 
 #introrow{
   min-height: 100% !important;
@@ -188,6 +193,36 @@ body {
 /* .limks:hover + .navname{
   display: block;
 } */
+
+
+#endfancys h1{
+  margin: 0.3rem;
+  position: relative;
+}
+
+
+#typing::after{
+  content: "";
+  position: absolute;
+  width: 1px;
+  top:5%;
+  height: 90%;
+  border-right: 2px solid white ;
+  animation:blink 1s infinite cubic-bezier(0.54, 0.01, 0.28, 0.83);
+}
+
+@keyframes blink {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+
 
 #abtmehead{
   display:none;
