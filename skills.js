@@ -4,19 +4,36 @@ function preload(){
     myfont = loadFont('PlayfairDisplay.ttf');
 }
 
-// skilllist=["HTML","python","CSS","JS","C","Java","Flutter","Bootstrap","C#","Unity","Django","","","","","","","","","","","","","","","","","","","","","","","","",""]
+// skilllist=["HTML","python","CSS","JS","C","Java","Flutter","Bootstrap","C#","Unity","Django","C++","PS","Illustrator","","","","","","","","","","","","","","","","","","","","","",""]
 
 
-skilllist=["","","","","", 
-          "","","HTML","",
-          "JS","","","Flutter","",
-          "","Django","","","Java",
-          "","","","","C#",
-          "","","CSS","","",
-          "","","","C","",
-          "","","","","",
-          "python","","","","Bootstrap",
-          "","","","Unity","",]
+// skilllist=["","","","Django","", 
+//           "","","Flutter","",
+//           "HTML","","","JS","",
+//           "","C++","","","Java",
+//           "","","","","C",
+//           "","","","","",
+//           "CSS","","","C#","",
+//           "","","python","","",
+//           "","","","","Bootstrap",
+//           "Photoshop","","","Unity","",]
+
+skilllist = [
+  "","","","Illustrator","","",      
+  "C++","","","","Unity","",
+  "","","CSS","","","",
+  "","","C#","","","Bootstrap",
+  "","HTML","","","Flutter","",
+  "","","","","PS","",
+  "","","","","","",
+  "","","Django","","","",
+  "","","","","","Java",
+  "","Python","","","","",
+  "","","","C","","",
+  "","","","JS","","",
+
+
+]
 
 function makeBox(x,y,z,r,i,rotn){
   textSize(r/10);
@@ -48,10 +65,11 @@ function draw() {
   background('#101218');
   // console.log()
   // noStroke();
+  
   lights();
   // texture(textu)
   // sphere(100);
-  let total = 10;
+  let total = 12;
   let r = 200;
   for (let i = 0; i < total; i++) {
     let lon = map(i,0,total,-Math.PI,Math.PI)
