@@ -177,25 +177,13 @@ let daytoday = document.querySelector('#dayto');
 daytoday.textContent = day;
 
 
-var scroller = new FancyScroll();
+document.body.addEventListener("mousemove",event =>{
+  const mouseX = event.clientX
+  const mouseY = event.clientY
 
-scroller.scale = 0.1;
-scroller.check = 50;
-scroller.move = 200;
-scroller.render = 2;
-
-var body = document.body,
-    html = document.documentElement;
-
-var height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-var items = document.querySelectorAll('.item');
-var containerWidth = window.innerWidth;
-var containerHeight =height;
-
-scroller.setEntries(items);
-scroller.resize(containerWidth, containerHeight);
-
-scroller.destroy();
-
-FancyScroll.destroyAll();
+  gsap.to(".circle",{
+    x:mouseX,
+    y:mouseY,
+    stagger:-0.1
+  });
+});
