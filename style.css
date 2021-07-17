@@ -53,6 +53,7 @@ body {
 
 #prjcts{
   background-color: #9DD1F1;
+  position: relative;
   /* min-height: 100vh; */
 }
 
@@ -65,6 +66,11 @@ body {
   color:#edf2f4;
 }
 
+.prjctdes{
+  position: absolute;
+  inset: 0;
+  /* z-index: 100; */
+}
 
 .circle{
   z-index:-100;
@@ -97,6 +103,11 @@ body {
   mix-blend-mode: screen;
   isolation: isolate;
 } */
+
+#carouselArt,.carousel-inner,.carousel-item{
+  height: 100%;
+}
+
 
 
 #introrow{

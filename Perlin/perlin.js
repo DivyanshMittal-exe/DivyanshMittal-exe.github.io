@@ -23,10 +23,14 @@ function draw() {
     vertex(width,height);
     endShape(CLOSE);
     offset += offsetchange;
-    console.log(offset)
+    // console.log(offset)
 
     }
     
   
 }
 
+function windowResized() {
+  resizeCanvas(window.innerWidth, window.innerHeight);
+  
+}

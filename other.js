@@ -177,13 +177,13 @@ let daytoday = document.querySelector('#dayto');
 daytoday.textContent = day;
 
 
-document.body.addEventListener("mousemove",event =>{
-  const mouseX = event.clientX
-  const mouseY = event.clientY
+// document.body.addEventListener("mousemove",event =>{
+//   const mouseX = event.clientX
+//   const mouseY = event.clientY
 
-  gsap.to(".circle",{
-    x:mouseX,
-    y:mouseY,
-    stagger:-0.1
-  });
-});
+//   gsap.to(".circle",{
+//     x:mouseX,
+//     y:mouseY,
+//     stagger:-0.1
+//   });
+// });
