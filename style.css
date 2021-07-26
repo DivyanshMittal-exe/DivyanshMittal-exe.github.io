@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fauna+One&family=Playfair+Display:wght@400;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 html {
   height: 100%;
@@ -8,12 +11,12 @@ html {
 body {
   height: 100vh;
   font-family: 'Fauna One', serif;
-  background-color: #4a4e69;
+  background-color: #fff;
   overflow-x: hidden
 }
 
 .hedingsfont{
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', serif;
 }
 
 
@@ -25,8 +28,8 @@ body {
 
 #intro
 {
-  background-color: #4a4e69;
-  color: #f1faee;
+  background-color: #0d0d0d;
+  color: #fff;
   height: 100%;
   
   margin-left: 0;
@@ -52,18 +55,20 @@ body {
 }
 
 #prjcts{
-  background-color: #9DD1F1;
+  background-color: #fff;
   position: relative;
   /* min-height: 100vh; */
 }
 
 #nvbreles{
-  color: #fff;
+  color: #b6b6b6
+  ;
 }
 
 #skills{
-  background-color: #101218;
-  color:#edf2f4;
+  background-color: #0d0d0d;
+  color:#fff;
+  box-shadow: 0 -1vh #0d0d0d;
 }
 
 .prjctdes{
@@ -99,10 +104,18 @@ body {
   margin: -300px 0 0 -300px;
 }
 
+#AboutMe{
+  box-shadow: 0 1vh #0d0d0d;
+
+}
 /* .Introtext{
   mix-blend-mode: screen;
   isolation: isolate;
 } */
+
+.card{
+  box-shadow: 0 5px 10px -7px rgba(0, 0, 0, 0.6);
+}
 
 #carouselArt,.carousel-inner,.carousel-item{
   height: 100%;
@@ -132,7 +145,7 @@ body {
 
 #cntct{
   
-  background-color: #333648;
+  background-color: #0d0d0d;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -280,8 +293,26 @@ body {
 
 #abtmehead{
   display:none;
+  font-size: 3rem;
+  color: #001427;
+}
+.abtmetxt{
+  font-size: 1.2rem;
+  color: #001427;
+}
+.skillshead{
+  font-size: 3rem;
+
 }
 
+.prjhead{
+  font-size:4rem;
+
+}
+.cntcthead{
+  font-size:4rem;
+  color: #fff;
+}
 
 #SideAniDiv{
   width: 25vw;
@@ -325,7 +356,7 @@ body {
 
 
 .nameme{
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 @media screen and (max-width:630px) {

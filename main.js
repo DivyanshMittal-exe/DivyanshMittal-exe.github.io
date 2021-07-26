@@ -1,6 +1,6 @@
 var x = 0;
 var y = 0;
-var spacing = 20;
+var spacing = 40;
 
 function setup(){
 
@@ -15,12 +15,19 @@ function setup(){
 
 
     canvas.parent('SideAni');
-    background('rgb(41, 50, 65)');
+    background('#0d0d0d');
+
     
 }
 
 function draw(){
-    stroke('rgb(224, 251, 252)');
+     for(let i = 0; i < 6; i++){
+         draw2();
+     }
+}
+function draw2(){
+    strokeWeight(4);
+    stroke('#C6C5B9');
     if (random(1) < 0.5) {
         line(x,y,x+spacing,y+spacing);
     }else{
@@ -38,7 +45,7 @@ function windowResized() {
     var Height = document.getElementById('SideAni').offsetHeight;
     var Width = document.getElementById('SideAni').clientWidth ;
     resizeCanvas(Width, Height);
-     background('rgb(41, 50, 65)');
+     background('#0d0d0d');
      x = 0;
     y = 0;
 

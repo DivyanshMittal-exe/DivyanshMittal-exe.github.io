@@ -37,6 +37,7 @@ skilllist = [
 
 function makeBox(x,y,z,r,i,rotn){
   textSize(r/10);
+      fill("#b6b6b6")
       textFont(myfont);
       // rotateX(-rotn[1])
       // rotateY(-rotn[2])
@@ -62,7 +63,7 @@ function setup() {
 }
 
 function draw() {
-  background('#101218');
+  background('#0d0d0d');
   // console.log()
   // noStroke();
   
