@@ -115,6 +115,15 @@ body {
 
 .card{
   box-shadow: 0 5px 10px -7px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 250ms ease-in,transform 250ms ease-in;
+}
+
+.card.appear{
+  opacity: 1;
+  transform: translateY(0%);
+
 }
 
 #carouselArt,.carousel-inner,.carousel-item{
@@ -137,6 +146,12 @@ body {
   
   
 }
+
+.perlinAni{
+  z-index: 10;
+  transform: translate3D(0px,2px,0px);
+}
+
 
 #cntctcon{
   padding-top: 10vh;
