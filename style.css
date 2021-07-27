@@ -57,9 +57,36 @@ body {
 #prjcts{
   background-color: #fff;
   position: relative;
+
+  /* box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.6); */
+  /* clip-path: inset( 0px 10px 0 -10px ); */
+
   /* min-height: 100vh; */
 }
-
+#prjcts::before{
+  content: ' ';
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-size: 5px;
+  color:white;
+  background-color: #0d0d0d;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.6);
+}
+#prjcts::after{
+  content: ' ';
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  font-size: 5px;
+  color:white;
+  background-color: #0d0d0d;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+}
 #nvbreles{
   color: #b6b6b6
   ;
@@ -105,7 +132,8 @@ body {
 }
 
 #AboutMe{
-  box-shadow: 0 1vh #0d0d0d;
+  box-shadow: inset 0 5px 10px -4px rgba(0, 0, 0, 0.6);
+
 
 }
 /* .Introtext{
