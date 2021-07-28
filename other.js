@@ -104,25 +104,25 @@ let day = ''
 
 switch (new Date().getDay()) {
   case 0:
-    day = "Sunday";
+    day = "sunday";
     break;
   case 1:
-    day = "Monday";
+    day = "monday";
     break;
   case 2:
-     day = "Tuesday";
+     day = "tuesday";
     break;
   case 3:
-    day = "Wednesday";
+    day = "wednesday";
     break;
   case 4:
-    day = "Thursday";
+    day = "thursday";
     break;
   case 5:
-    day = "Friday";
+    day = "friday";
     break;
   case 6:
-    day = "Saturday";
+    day = "saturday";
 }
 
 txts = ["ace", "amazing", "astonishing", "astounding", "awe-inspiring", "awesome", "badass", "beautiful", "bedazzling", "bee's knees", "best", "breathtaking", "brilliant", "cat's meow", "cat's pajamas", "classy", "cool", "dandy", "dazzling", "delightful", "divine", "doozie", "epic", "excellent", "exceptional", "exquisite", "extraordinary", "fabulous", "fantastic", "fantabulous", "fine", "finest", "first-class", "first-rate", "flawless", "funkadelic", "geometric", "glorious", "gnarly", "good", "grand", "great", "groovy", "groundbreaking", "hunky-dory", "impeccable", "impressive", "incredible", "kickass", "kryptonian", "laudable", "legendary", "lovely", "luminous", "magnificent", "majestic", "marvelous", "mathematical", "mind-blowing", "neat", "outstanding", "peachy", "perfect", "phenomenal", "pioneering", "polished", "posh", "praiseworthy", "premium", "priceless", "prime", "primo", "rad", "remarkable", "riveting", "sensational", "shining", "slick", "smashing", "solid", "spectacular", "splendid", "stellar", "striking", "stunning", "stupendous", "stylish", "sublime", "super", "super-duper", "super-excellent", "superb", "superior", "supreme", "sweet", "swell", "terrific", "tiptop", "top-notch", "transcendent", "tremendous", "ultimate", "unreal", "well-made", "wicked", "wonderful", "wondrous", "world-class"]

@@ -6,7 +6,8 @@ function setup(){
 
     var Height = document.getElementById('SideAni').offsetHeight;
     var Width = document.getElementById('SideAni').offsetWidth ;
-    let canvas = createCanvas(1.01*Width,Height );
+    let canvas = createCanvas(window.innerWidth,window.innerHeight );
+    // let canvas = createCanvas(Width,Height );
     console.log(window.innerHeight);
     console.log(self.innerHeight);
     console.log(parent.innerHeight);
@@ -26,7 +27,7 @@ function draw(){
      }
 }
 function draw2(){
-    strokeWeight(4);
+    strokeWeight(round(width/400));
     stroke('#C6C5B9');
     if (random(1) < 0.5) {
         line(x,y,x+spacing,y+spacing);
@@ -45,8 +46,8 @@ function windowResized() {
     var Height = document.getElementById('SideAni').offsetHeight;
     var Width = document.getElementById('SideAni').clientWidth ;
     resizeCanvas(Width, Height);
-     background('#0d0d0d');
-     x = 0;
+    background('#0d0d0d');
+    x = 0;
     y = 0;
 
   }

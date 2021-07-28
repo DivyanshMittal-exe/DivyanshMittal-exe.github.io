@@ -1,6 +1,6 @@
 
 function setup() {
-  createCanvas(window.innerWidth, 1.1*window.innerHeight);
+  createCanvas(1.0*window.innerWidth,1.0* window.innerHeight);
 
 }
 let offset = 1;
@@ -16,13 +16,13 @@ function draw() {
     stroke(255);
 
     beginShape();
-    vertex(0,1.1*height);
-    for (let i = 0; i < width; i+=2) {
+    vertex(-0.1*width,1.1*height);
+    for (let i = -0.1*width; i < 1.1*width; i+=2) {
         let h = map(noise(0.85*offset + 0.07*k, +  0.01*offset+ 0.0021*i),0,1,0,height);
 
         vertex(i,h+k*koffset);
     }
-    vertex(width,1.1*height);
+    vertex(1.1*width,1.1*height);
     endShape(CLOSE);
     offset += offsetchange;
     // console.log(offset)
@@ -33,6 +33,7 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(window.innerWidth, window.innerHeight);
+  resizeCanvas(1.0*window.innerWidth,1.0* window.innerHeight);
+
   
 }
