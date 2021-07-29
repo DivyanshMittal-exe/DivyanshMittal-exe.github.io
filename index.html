@@ -18,98 +18,10 @@
 </head>
 
 <body>
+
+  <!-- Navigation Bar -->
+
   <header style="overflow: hidden">
-    <nav class="position-fixed w-100 h-100" style="display: none;">
-      <div class="d-flex justify-content-end h-100">
-        <ul class="NavList my-auto me-4" style="list-style-type: none">
-          <li class="py-2">
-            <div class="d-flex justify-content-end">
-              <div class="pe-5 navname">Home</div>
-
-              <a href="#home" class="limks">
-                <i class="bi bi-circle-fill limks"></i>
-              </a>
-            </div>
-          </li>
-          <li class="py-2">
-            <div class="d-flex justify-content-end">
-              <div class="pe-5 navname">About Me</div>
-              <a href="#AboutMe" class="limks">
-                <i class="bi bi-circle-fill limks"></i>
-              </a>
-            </div>
-          </li>
-          <li class="py-2">
-            <div class="d-flex justify-content-end">
-              <div class="pe-5 navname">Projects</div>
-              <a href="#prjcts" class="limks">
-                <i class="bi bi-circle-fill limks"></i>
-              </a>
-            </div>
-          </li>
-          <li class="py-2">
-            <div class="d-flex justify-content-end">
-              <div class="pe-5 navname">Contact Me</div>
-              <a href="#cntctmecon" class="limks">
-                <i class="bi bi-circle-fill limks"></i>
-              </a>
-            </div>
-          </li>
-          <li class="py-2">
-            <div class="d-flex justify-content-end">
-              <div class="pe-5 navname">Resume</div>
-              <a href="javascript:void(0)" onclick="doingClick();" class="limks">
-                <i class="bi bi-circle-fill limks"></i>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- <nav
-        class="
-          navbar navbar-expand-lg
-          fixed-top
-          navbar-light
-          w-100
-          float-right
-          ms-auto
-          mainnavbar
-        "
-        id="nvbreles"
-      >
-        <div class="container ms-auto">
-          <button
-            class="navbar-toggler ms-auto"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            id="collapsedButton"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div
-            class="collapse navbar-collapse mainnavbar"
-            id="navbarNavAltMarkup"
-          >
-            
-            <div class="d-flex flex-row-reverse w-100">
-              <a class="nav-item nav-link" href="#home">Home</a>
-            <a class="nav-item nav-link" href="#AboutMe">About Me</a>
-            <a class="nav-item nav-link" href="#prjcts">Projects</a>
-            <a class="nav-item nav-link" href="#cntctmecon">Contact Me</a>
-            <a class="nav-item nav-link" href="javascript:void(0)" onclick="doingClick();">Resume</a>
-          </div>
-            </div>
-          </div>
-        </div>
-      </nav> -->
-
     <nav class="
           navbar navbar-expand-lg
           fixed-top
@@ -121,61 +33,30 @@
         " id="nvbreles">
       <div class="container w-100 ">
         <button class="Haburger ms-auto" type="button" id="collapsedButton">
-
           <i class="bi bi-justify"></i>
-
-
         </button>
 
         <div class="collapse navbar-collapse mainnavbar d-flex justify-content-center" id="navbarNavAltMarkup">
 
           <div class="NavBarLinks" id="NavBarLinks">
-            <a class="nav-item nav-link" href="#home">Home</a>
+            <a class="nav-item nav-link" href="#Home">Home</a>
             <a class="nav-item nav-link" href="#AboutMe">About Me</a>
-            <a class="nav-item nav-link" href="#skills">My Skills</a>
-            <a class="nav-item nav-link" href="#prjcts">Projects</a>
-            <a class="nav-item nav-link" href="#cntctmecon">Contact Me</a>
+            <a class="nav-item nav-link" href="#Skills">My Skills</a>
+            <a class="nav-item nav-link" href="#Projects">Projects</a>
+            <a class="nav-item nav-link" href="#ContactMe">Contact Me</a>
             <a class="nav-item nav-link" href="javascript:void(0)" onclick="doingClick();">Resume</a>
           </div>
         </div>
       </div>
       </div>
     </nav>
-
-    <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a class="navbar-brand" href="#"
-          ><span style="display: none">Hidden</span></a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#home">Home</a>
-            <a class="nav-item nav-link" href="#AboutMe">About Me</a>
-            <a class="nav-item nav-link" href="#prjcts">Projects</a>
-            <a class="nav-item nav-link" href="#cntctmecon">Contact Me</a>
-            <a
-              class="nav-item nav-link"
-              href="javascript:void(0)"
-              onclick="doingClick();"
-              >Resume</a
-            >
-          </div>
-        </div>
-      </nav> -->
   </header>
-  <div id="SideAni"></div>
 
-  <div class="container-fluid w-100 h-100 mainHomeCon" >
+
+  <!-- HomePage -->
+
+  <div id="SideAni"></div>
+  <div class="container-fluid w-100 h-100 mainHomeCon"  id = "Home">
     <div class="d-flex align-items-stretch justify-content-center h-100 mainHome">
       <div class="d-flex align-items-center">
         <div>
@@ -206,37 +87,6 @@
       
     </div>
   </div>
-
-  <!-- <div class="container mainHome" id="home">
-    <div class="container" id="introcon">
-          <h1>
-            Divyansh Mittal
-          </h1>
-    </div>
-  </div> -->
-
-  <!-- <div class="Introtext">
-    <h3 class="text">
-      Hello, World!
-    </h3>
-    <h1 class="text hedingsfont nameme">
-      I'm Divyansh
-    </h1>
-    <h5 class="text" style="color: #b6b6b6;">
-      A Sophomore at IITD pursuing computer science as my major
-    </h5>
-    <hr />
-    <a class="text-light" href="https://github.com/DivyanshMittal-exe/"><i class="bi bi-github" id="icon1"
-        style="font-size: 2rem; color: cornflowerblue"></i></a>
-
-    <a class="text-light" href="https://www.instagram.com/higgsboson.m/"><i class="bi bi-instagram" id="icon2"
-        style="font-size: 2rem; color: cornflowerblue"></i></a>
-
-    <a class="text-light" href="https://www.linkedin.com/in/divyansh-mittal-a910931ba/"><i class="bi bi-linkedin"
-        id="icon3" style="font-size: 2rem; color: cornflowerblue"></i></a>
-    <a class="text-light" href="https://www.facebook.com/divyansh.mittal.10/"><i class="bi bi-facebook" id="icon4"
-        style="font-size: 2rem; color: cornflowerblue"></i></a>
-  </div> -->
 
   <!-- About Me Section -->
 
@@ -269,7 +119,8 @@
   </div>
 
   <!-- Skills -->
-  <div class="container-fluid m-0 p-0 h-100 align-middle" id="skills" style="z-index: 10;">
+
+  <div class="container-fluid m-0 p-0 h-100 align-middle" id="Skills" style="z-index: 10;">
     <div class="row row-cols-1 row-cols-md-2 h-100 w-100">
 
       <div class="col-md-4">
@@ -280,15 +131,13 @@
               h-100
               
             ">
-          <h1 class="text-center hedingsfont skillshead">My skills</h1>
+          <h1 class="text-center hedingsfont Skillshead">My Skills</h1>
         </div>
 
       </div>
       <div class="col-md-8 p-0" >
-        <iframe src="skills/skills.html" scrolling="no" frameborder="0"
+        <iframe src="Skills/skills.html" scrolling="no" frameborder="0"
           style="position: relative; height: 100%; width: 100%;">
-
-
         </iframe>
       </div>
 
@@ -300,33 +149,17 @@
 
   <!-- Projects Section -->
 
-  <div class="container-fluid m-0 py-auto align-middle item" id="prjcts">
+  <div class="container-fluid m-0 py-auto align-middle item" id="Projects">
     <div class="row w-100" style="padding:  12vh 0;">
       <h1 class="text-center hedingsfont mb-0 prjhead" style="color: #2a323d;text-shadow:1px;">Projects</h1>
     </div>
 
-
     <div class="row prjctrow h-100" style="padding: 0 4vw 10vh 4vw;">
-      <!-- <div class="col-sm-4">
-        <div class="
-              d-flex
-              flex-column
-              justify-content-center
-              h-100
-              m-2
-            ">
-          <h1 class="text-center hedingsfont" style="color: #2a323d;text-shadow:1px;">Projects</h1>
-        </div>
-      </div> -->
-      <!-- border border-primary border-2 -->
+      
       <div class="col-sm-12 d-flex flex-column justify-content-center align-middle">
         <div class="row row-cols-1 row-cols-md-3 m-2">
           <div class="col mb-4">
-            <!-- <img src="Chess.png" id = "ChessImgBorder" /> -->
             <div class="card  m-2 h-100">
-
-
-
               <img
                 src="https://images.unsplash.com/photo-1604948501466-4e9c339b9c24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlc3N8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
                 class="card-img-top" alt="..." />
@@ -353,14 +186,7 @@
             </div>
           </div>
           <div class="col mb-4">
-            <!-- <img src="Chess.png" id = "ChessImgBorder" /> -->
             <div class="card  m-2 me-2 h-100">
-
-
-
-              <!-- <img
-                src="https://images.squarespace-cdn.com/content/v1/5c12933f365f02733c923e4e/1548697680570-FQY4FY8EK4SEJOTW9CR8/EssayHeader_2.jpg"
-                class="card-img-top" alt="..." /> -->
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -423,85 +249,15 @@
               </div>
             </div>
           </div>
-          <!-- <div class="col">
-              <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div> -->
+         </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Generative Art -->
-  <!-- <div class="container-fluid w-100 h-100 bg-light">
-    <div class="row py-auto"  style="height: 15%;">
-      <div class="col-12 my-auto">
-        <h1 class="text-center my-auto">
-          Genertive Art
-        </h1>
-        
-      </div>
-
-
-
-
-
-    </div>
-
-    <div class="row" style="height: 85%;width:100%;">
-      <div class="col-12 m-2">
-        <div id="carouselExampleControls" class="carousel slide h-100" data-bs-ride="carousel" >
-          <div class="carousel-inner">
-            <div class="carousel-item ">
-              <iframe src="Background/background.html" scrolling="no" frameborder="0" style="position: relative; height: 100%; width: 100%;">
-        
-        
-              </iframe>
-            </div>
-            <div class="carousel-item">
-              <iframe src="FancyDot/FancyDot.html" scrolling="no" frameborder="0" style="position: relative; height: 100%; width: 100%;">
-        
-        
-              </iframe>
-              
-            </div>
-            <div class="carousel-item active">
-              <iframe src="PerlinMany/perlin.html" scrolling="no" frameborder="0" style="position: relative; height: 100%; width: 100%;">
-        
-        
-              </iframe>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-        
-      </div>
-    </div> -->
-
-
-
-
-
-
-
-
-
-  </div>
   <!-- Contact Me -->
 
-  <div class="container-fluid m-0 p-0 align-middle item" id="cntctmecon">
+  <div class="container-fluid m-0 p-0 align-middle item" id="ContactMe">
     <div id="cntct" style="color: #b6b6b6">
       <div class="d-flex justify-content-center my-auto p-4">
         <h1 class="hedingsfont mt-2 cntcthead text-center">Contact Me</h1>
@@ -528,17 +284,10 @@
       <div class="container-fluid">
         <hr class="rgba-white-light" style="margin: 0 15%" />
 
-
         <div class=" d-flex flex-wrap justify-content-center pt-3 pb-2 endfancys">
-          
             <h3 id="typing" class="display-6 text text-center"></h3>
             <h3 id="dayto" class="display-6 text text-center" style="margin-left: 0.85rem;">Sunday</h3>
-          
-
-          
-
         </div>
-
 
         <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%" />
 

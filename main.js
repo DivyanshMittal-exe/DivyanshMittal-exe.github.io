@@ -22,7 +22,7 @@ function setup(){
 }
 
 function draw(){
-     for(let i = 0; i < 6; i++){
+     for(let i = 0; i < 50; i++){
          draw2();
      }
 }
@@ -39,6 +39,9 @@ function draw2(){
     if (x>width){
         x = 0;
         y+= spacing;
+    }
+    if( y > 1.1*height){
+        noLoop();
     }
 }
 

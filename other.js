@@ -14,10 +14,10 @@ const navbar = document.querySelector(".mainnavbar");
 
 
 
-let nvbr = document.querySelector(".NavList");
-let nvbrnames = document.getElementsByClassName("navname");
-nvbr.addEventListener("mouseover", MouseOn);
-nvbr.addEventListener("mouseout", MouseOff);
+// let nvbr = document.querySelector(".NavList");
+// let nvbrnames = document.getElementsByClassName("navname");
+// nvbr.addEventListener("mouseover", MouseOn);
+// nvbr.addEventListener("mouseout", MouseOff);
 
 
 function MouseOn(){

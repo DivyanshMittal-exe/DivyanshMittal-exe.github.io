@@ -61,7 +61,7 @@ body {
 }
 
 
-#prjcts{
+#Projects{
   background-color: #fff;
   position: relative;
 
@@ -70,7 +70,7 @@ body {
 
   /* min-height: 100vh; */
 }
-#prjcts::before{
+#Projects::before{
   content: ' ';
   width: 100%;
   position: absolute;
@@ -82,7 +82,7 @@ body {
   background-color: #0d0d0d;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.6);
 }
-#prjcts::after{
+#Projects::after{
   content: ' ';
   width: 100%;
   position: absolute;
@@ -99,7 +99,7 @@ body {
   ;
 }
 
-#skills{
+#Skills{
   background-color: #0d0d0d;
   color:#fff;
   box-shadow: 0 -1vh #0d0d0d;
@@ -346,7 +346,7 @@ body {
   font-size: 1.2rem;
   color: #001427;
 }
-.skillshead{
+.Skillshead{
   font-size: 3rem;
 
 }
@@ -422,7 +422,7 @@ body {
   /* #intro{
     width: 100vw;
   } */
-  .skillshead{
+  .Skillshead{
     font-size: 1.5rem;
   
   }
@@ -463,7 +463,7 @@ body {
   .nameme{
     font-size: 11vw;
   }
-  .skillshead{
+  .Skillshead{
     font-size: 2rem;
   }
   #abtmehead{
@@ -476,6 +476,14 @@ body {
   }
 }
 
+
+.preloader{
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100vh;
+  inset: 0;
+}
 
 
 
