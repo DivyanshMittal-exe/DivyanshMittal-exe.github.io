@@ -1,15 +1,15 @@
 const hamburger = document.getElementById("collapsedButton");
 
 const navbar = document.querySelector(".mainnavbar");
-      window.onscroll = () => {
-        if (window.scrollY > 0) {
-          navbar.classList.add("scrollingActive");
-          hamburger.style.color = "black";
-        } else {
-          navbar.classList.remove("scrollingActive");
-          hamburger.style.color = "white";
-        }
-      };
+window.onscroll = () => {
+  if (window.scrollY > 0) {
+    navbar.classList.add("scrollingActive");
+    hamburger.style.color = "black";
+  } else {
+    navbar.classList.remove("scrollingActive");
+    hamburger.style.color = "white";
+  }
+};
 
 
 
@@ -20,56 +20,56 @@ const navbar = document.querySelector(".mainnavbar");
 // nvbr.addEventListener("mouseout", MouseOff);
 
 
-function MouseOn(){
-    for (let i = 0; i < nvbrnames.length; i++) {
-       nvbrnames[i].style.display = 'block';
-       
-    }
-    for (let i = 0; i < nvbrnames.length; i++) {
-        nvbrnames[i].classList.remove('animate__animated', 'animate__fadeOutRight');
-     }
-    for (let i = 0; i < nvbrnames.length; i++) {
-        nvbrnames[i].classList.add('animate__animated', 'animate__fadeInRight');  
-     }
+function MouseOn() {
+  for (let i = 0; i < nvbrnames.length; i++) {
+    nvbrnames[i].style.display = 'block';
 
-    
-    // nvbrnames.sty
-    // nvbr.classList.add("scrollingActive");
+  }
+  for (let i = 0; i < nvbrnames.length; i++) {
+    nvbrnames[i].classList.remove('animate__animated', 'animate__fadeOutRight');
+  }
+  for (let i = 0; i < nvbrnames.length; i++) {
+    nvbrnames[i].classList.add('animate__animated', 'animate__fadeInRight');
+  }
+
+
+  // nvbrnames.sty
+  // nvbr.classList.add("scrollingActive");
 }
 
 
 function MouseOff() {
-    for (let i = 0; i < nvbrnames.length; i++) {
-        nvbrnames[i].classList.remove('animate__animated', 'animate__fadeInRight');
-     }
-    for (let i = 0; i < nvbrnames.length; i++) {
-        nvbrnames[i].classList.add('animate__animated', 'animate__fadeOutRight'); 
-     }
+  for (let i = 0; i < nvbrnames.length; i++) {
+    nvbrnames[i].classList.remove('animate__animated', 'animate__fadeInRight');
   }
+  for (let i = 0; i < nvbrnames.length; i++) {
+    nvbrnames[i].classList.add('animate__animated', 'animate__fadeOutRight');
+  }
+}
 
 
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    //print(rect)
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  //print(rect)
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 
-    );
+  );
 }
 
 
 const abtmeheading = document.querySelector('#abtmehead');
 
 document.addEventListener('scroll', function () {
-     if(isInViewport(abtmeheading)){
-        abtmeheading.style.display = 'block';
-        abtmeheading.classList.add('animate__animated', 'animate__fadeInUp');
+  if (isInViewport(abtmeheading)) {
+    abtmeheading.style.display = 'block';
+    abtmeheading.classList.add('animate__animated', 'animate__fadeInUp');
 
-     }
-        
+  }
+
 
 });
 
@@ -80,18 +80,18 @@ document.addEventListener('scroll', function () {
 
 const NavLinks = document.getElementById("NavBarLinks");
 
-hamburger.addEventListener ('click',()=>{
-    console.log("clickes");
-    NavLinks.classList.toggle("showNav");
-    navbar.classList.toggle("scrollingActive2");
-    
-    // if (NavLinks.style.display != "none") {
-    //     console.log("Hi");
-    //     navbar.classList.add("scrollingActive");
-    //   }else{
-    //     navbar.classList.remove("scrollingActive");
-    //   }
-    
+hamburger.addEventListener('click', () => {
+  console.log("clickes");
+  NavLinks.classList.toggle("showNav");
+  navbar.classList.toggle("scrollingActive2");
+
+  // if (NavLinks.style.display != "none") {
+  //     console.log("Hi");
+  //     navbar.classList.add("scrollingActive");
+  //   }else{
+  //     navbar.classList.remove("scrollingActive");
+  //   }
+
 });
 
 // data-bs-toggle="collapse"
@@ -102,6 +102,8 @@ hamburger.addEventListener ('click',()=>{
 
 let day = ''
 
+let curs = "|";
+
 switch (new Date().getDay()) {
   case 0:
     day = "sunday";
@@ -110,7 +112,7 @@ switch (new Date().getDay()) {
     day = "monday";
     break;
   case 2:
-     day = "tuesday";
+    day = "tuesday";
     break;
   case 3:
     day = "wednesday";
@@ -133,34 +135,60 @@ let currentText = '';
 let letter = '';
 let art = ''
 let typing = document.querySelector('#typing');
-(function type(){
-  
-  if (letter[0] == 'a' || letter[0] == 'e' || letter[0] == 'i' || letter[0] == 'o' || letter[0] == 'u'  ){
-    art = "an";
-  }else{
-    art = "a";
+let removing = false;
+
+(function type() {
+  currentText = txts[count];
+  // console.log(index,count,removing)
+  // typing.textContent = "Stay bold & have "+ art + " " +letter ;
+  if (letter.length == currentText.length && removing == false) {
+    // count = (count + 1 + Math.floor(Math.random() * (txts.length - 1))) % txts.length;
+    // index = 0;
+    removing = true;
+    setTimeout(type, 2000)
+  } else {
+
+    if (removing == false) {
+
+      if (letter[0] == 'a' || letter[0] == 'e' || letter[0] == 'i' || letter[0] == 'o' || letter[0] == 'u') {
+        art = "an";
+      } else {
+        art = "a";
+      }
+      
+      letter = currentText.slice(0, ++index);
+
+      let c = letter.length / currentText.length;
+      let timeint = Math.floor((1.4 - Math.sin(Math.PI * c)) * 100);
+      setTimeout(type, timeint)
+    } else {
+      if (index == 0) {
+        removing = false;
+        count = (count + 1 + Math.floor(Math.random() * (txts.length - 1))) % txts.length;
+      } else {
+        // currentText = txts[count]
+        letter = letter.slice(0,--index);
+        // index = 0
+      }
+      setTimeout(type, 10)
+    }
   }
-  currentText = txts[count]
-  letter = currentText.slice(0,++index);
 
-  let c = letter.length/currentText.length;
-  
-  typing.textContent = "Stay bold & have "+ art + " " +letter ;
-  if(letter.length == currentText.length){
-    count = (count + 1+  Math.floor(Math.random() *( txts.length - 1)) ) % txts.length;
-    index = 0;
-    setTimeout(type,2000)
-  }else{
-    let timeint =Math.floor( (1.4-Math.sin(Math.PI*c))*100);
-    setTimeout(type,timeint)
-  
+}());
+
+(function typeCursor() {
+  if (curs == "|") {
+    curs = " ";
+  } else {
+    curs = "|";
   }
+  setTimeout(typeCursor, 300)
 
+}());
 
-
-  
-
-
+(function dispText() {
+  typing.textContent = "Stay bold & have " + art + " " + letter + curs + day;
+  setTimeout(dispText, 10);
 }());
 
 // let fancyend = document.querySelector('#endfancys');
@@ -173,8 +201,8 @@ let typing = document.querySelector('#typing');
 
 
 
-let daytoday = document.querySelector('#dayto');
-daytoday.textContent = day;
+// let daytoday = document.querySelector('#dayto');
+// daytoday.textContent = day;
 
 
 // document.body.addEventListener("mousemove",event =>{
@@ -193,25 +221,30 @@ daytoday.textContent = day;
 let cards = document.querySelectorAll('.card');
 
 const appearOptions = {
-  threshold:0.2,
+  threshold: 0.2,
 
 };
 
 const appearOnScroll = new IntersectionObserver(
-  function(
-    entries,appearOnScroll 
-  ){
-    entries.forEach(entry =>{
-      if(!entry.isIntersecting){
+  function (
+    entries, appearOnScroll
+  ) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
         return;
-      }else{
+      } else {
         entry.target.classList.add('appear');
         appearOnScroll.unobserve(entry.target);
       }
     })
-  },appearOptions
+  }, appearOptions
 );
 
-cards.forEach(card=>{
+cards.forEach(card => {
   appearOnScroll.observe(card)
 })
+
+// window.addEventListener('load', () => {
+//   const prldr = document.querySelector('.prloader')
+//   prldr.classList.add('finished')
+// })
