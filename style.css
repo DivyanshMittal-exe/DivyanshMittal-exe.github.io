@@ -11,8 +11,8 @@ html {
   overflow-x: hidden
   
 }
-
-/* * {
+/* 
+* {
   outline: 1px solid #f00 !important;
 } */
 
@@ -413,39 +413,7 @@ body {
   font-size: 6rem;
 }
 
-@media screen and (max-width:630px) {
-  #SideAniDiv{
-    width: 100%;
-    height:25%;
-    display: block;
-    position: relative;
-  }
 
-  #hiddenintroelement{
-    display: none;
-    height: 0;
-  }
-  /* #intro{
-    width: 100vw;
-  } */
-  .Skillshead{
-    font-size: 1.5rem;
-  
-  }
-
-  .mainHome{
-    margin:13vh 0;
-    padding: 0 8vw;
-    background-color: #0d0d0d;
-    color: #fff;
-   }
-   #typing{
-
-    font-size: 1rem;
-  }
-   
-
-}
 @media screen and (max-width:991px) {
   .NavBarLinks{
     display: none;
@@ -485,7 +453,7 @@ body {
   }
   #typing{
     
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
   
 }
@@ -506,4 +474,44 @@ body {
 .prloader.finished{
   opacity: 0;
   pointer-events: none;
+}
+@media screen and (max-width:630px) {
+  .footer-copyright{
+    font-size: small;
+     
+   }
+   
+   #typing{
+    font-size: small  !important;
+  }
+  #SideAniDiv{
+    width: 100%;
+    height:25%;
+    display: block;
+    position: relative;
+  }
+
+  #hiddenintroelement{
+    display: none;
+    height: 0;
+  }
+  /* #intro{
+    width: 100vw;
+  } */
+  .Skillshead{
+    font-size: 1.5rem;
+  
+  }
+
+  .mainHome{
+    margin:13vh 0;
+    padding: 0 8vw;
+    background-color: #0d0d0d;
+    color: #fff;
+   }
+   
+
+   
+   
+
 }

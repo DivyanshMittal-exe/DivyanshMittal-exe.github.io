@@ -52,5 +52,5 @@ function windowResized() {
     background('#0d0d0d');
     x = 0;
     y = 0;
-
+    loop()
   }
