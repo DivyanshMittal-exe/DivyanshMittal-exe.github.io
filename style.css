@@ -156,9 +156,9 @@ body {
 
 .card{
   box-shadow: 0 5px 10px -7px rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transform: translateY(10%);
-  transition: opacity 250ms ease-in,transform 250ms ease-in;
+  /* opacity: 0; */
+  transform: translateY(50%);
+  /* transition: opacity 250ms ease-in,transform 250ms ease-in; */
 }
 
 .card.appear{
@@ -183,7 +183,7 @@ body {
 .perlinAni{
   z-index: 10;
   width: 100vw;
- 
+  transform: translateY(70%);
   /* transform:translateY(10px); */
 }
 

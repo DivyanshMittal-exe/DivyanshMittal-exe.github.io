@@ -218,33 +218,72 @@ let removing = false;
 
 // ScrollReveal().reveal('.card');
 
-let cards = document.querySelectorAll('.card');
+// let cards = document.querySelectorAll('.card');
 
-const appearOptions = {
-  threshold: 0.2,
+// const appearOptions = {
+//   threshold: 0.2,
 
-};
+// };
 
-const appearOnScroll = new IntersectionObserver(
-  function (
-    entries, appearOnScroll
-  ) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        return;
-      } else {
-        entry.target.classList.add('appear');
-        appearOnScroll.unobserve(entry.target);
-      }
-    })
-  }, appearOptions
-);
+// const appearOnScroll = new IntersectionObserver(
+//   function (
+//     entries, appearOnScroll
+//   ) {
+//     entries.forEach(entry => {
+//       if (!entry.isIntersecting) {
+//         return;
+//       } else {
+//         entry.target.classList.add('appear');
+//         appearOnScroll.unobserve(entry.target);
+//       }
+//     })
+//   }, appearOptions
+// );
 
-cards.forEach(card => {
-  appearOnScroll.observe(card)
-})
+// cards.forEach(card => {
+//   appearOnScroll.observe(card)
+// })
 
 // window.addEventListener('load', () => {
 //   const prldr = document.querySelector('.prloader')
 //   prldr.classList.add('finished')
 // })
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".perlinAni",{
+    scrollTrigger:{
+        trigger:"#AboutMe",
+        
+        start: "10% 60%",
+        end: "10% 30%",
+        // toggleActions:"restart none none none",
+        scrub: 1,
+        // markers: true
+    },
+    y: "0"
+    
+});
+
+gsap.to(".card",{
+  scrollTrigger:{
+      trigger:"#Projects",
+      
+      start: "top 70%",
+      end: "5% 37%",
+      // toggleActions:"restart none none none",
+      scrub: 1,
+      // markers: true
+  },
+  y: "0",
+  // opacity:1,
+  // duration: 0.25,
+  stagger: { 
+    each: 0.1,
+    from: "center",
+    // grid: "auto",
+    // ease: "power2.inOut",
+    // repeat: -1 
+  }
+  
+});
