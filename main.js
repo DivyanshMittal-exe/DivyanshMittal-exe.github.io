@@ -1,56 +1,123 @@
-var x = 0;
-var y = 0;
-var spacing = 40;
+import './style.css'
 
-function setup(){
-
-    var Height = document.getElementById('SideAni').offsetHeight;
-    var Width = document.getElementById('SideAni').offsetWidth ;
-    let canvas = createCanvas(window.innerWidth,window.innerHeight );
-    // let canvas = createCanvas(Width,Height );
-    console.log(window.innerHeight);
-    console.log(self.innerHeight);
-    console.log(parent.innerHeight);
-    console.log(top.innerHeight);
-    // console.log(clientHeight);
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import {
+	GLTFLoader
+} from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {
+	GUI
+} from 'dat.gui'
+import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment';
 
 
-    canvas.parent('SideAni');
-    background('#0d0d0d');
+let mainDiv = document.getElementsByClassName("maintext")[0]
 
-    
-}
+let Width = window.innerWidth > mainDiv.clientWidth ? window.innerWidth: mainDiv.clientWidth ;
+let Height = window.innerHeight > mainDiv.clientHeight ? window.innerHeight: mainDiv.clientHeight ;
 
-function draw(){
-     for(let i = 0; i < 50; i++){
-         draw2();
-     }
-}
-function draw2(){
-    strokeWeight(round(width/400));
-    stroke('#C6C5B9');
-    if (random(1) < 0.5) {
-        line(x,y,x+spacing,y+spacing);
-    }else{
-        line(x,y+spacing,x+spacing,y);
+// const gui = new GUI()
 
-    }
-    x+= spacing;
-    if (x>width){
-        x = 0;
-        y+= spacing;
-    }
-    if( y > 1.1*height){
-        noLoop();
-    }
-}
+let is_threejs = false;
 
-function windowResized() {
-    var Height = document.getElementById('SideAni').offsetHeight;
-    var Width = document.getElementById('SideAni').clientWidth ;
-    resizeCanvas(Width, Height);
-    background('#0d0d0d');
-    x = 0;
-    y = 0;
+const scene = new THREE.Scene()
+scene.background = new THREE.Color( 0x181215 );
+
+const camera = new THREE.PerspectiveCamera(75, Width / Height, 0.1, 1000)
+
+
+const renderer = new THREE.WebGLRenderer({
+	canvas: document.querySelector('#maintd'),
+	antialias : true
+})
+
+renderer.setPixelRatio(window.devicePixelRatio)
+
+renderer.setSize(Width, Height)
+
+camera.position.set(-5, 4, 5.5)
+
+// const controls = new OrbitControls( camera, renderer.domElement );
+
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1;
+renderer.outputEncoding = THREE.sRGBEncoding;
+
+// renderer.shadowMap.enabled = true;
+// renderer.gammaOutput = true;
+
+const ambientLight = new THREE.HemisphereLight(
+	0xddeeff,
+	0x202020,
+	1,
+);
+
+const mainLight = new THREE.DirectionalLight(0xffffff, 1);
+mainLight.position.set(10, 10, 10);
+
+mainLight.castShadow = true;
+mainLight.shadow.bias = -0.0001;
+mainLight.shadow.mapSize.width = 1024*4;
+mainLight.shadow.mapSize.height = 1024*4;
+
+
+scene.add(ambientLight, mainLight);
+
+const loader = new GLTFLoader();
+var gmodel;
+loader.load('Me.glb', function (gltf) {
+	gmodel = gltf.scene;
+	console.log(gmodel)
+	gmodel.traverse(n => { if ( n.isMesh ) {
+		n.castShadow = true; 
+		n.receiveShadow = true;
+		if(n.material.map) n.material.map.anisotropy = 16; 
+	  }});
+	
+	  gmodel.rotation.y = -2;
+	// gmodel.children[9].children[0].material.emissive = new THREE.Color( 0x00ffff );
+	scene.add(gmodel);
     loop()
-  }
+
+
+
+}, function ( xhr ) {
+
+	if( xhr.loaded ==  xhr.total ){
+		is_threejs = true;
+	}
+
+}, function (error) {
+
+	console.error(error);
+
+});
+
+
+renderer.shadowMap.enabled = true;
+
+
+window.addEventListener( 'resize', onWindowResize, false );
+
+function onWindowResize(){
+	let mainDiv = document.getElementsByClassName("maintext")[0]
+
+let Width = window.innerWidth > mainDiv.clientWidth ? window.innerWidth: mainDiv.clientWidth ;
+let Height = window.innerHeight > mainDiv.clientHeight ? window.innerHeight: mainDiv.clientHeight ;
+    camera.aspect = Width / Height;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( Width, Height );
+
+}
+
+function animate(){
+	requestAnimationFrame(animate)
+	gmodel.rotation.y += 0.005;
+   	renderer.render( scene, camera );
+}
+
+
+  
+
+animate()
