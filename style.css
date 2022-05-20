@@ -6,6 +6,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
 
+@import './node_modules/sal.js/dist/sal.css';
+
 :root {
   --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
@@ -14,7 +16,15 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "ndunk";
+  letter-spacing: 0px;
+
 }
+
+h1{
+  font-family: 'Poppins', sans-serif;
+}
+
 
 @font-face {
   font-family: "dunk";
@@ -31,6 +41,23 @@ body {
   src: url("allbold.wofff2") format('woff');
 }
 
+
+.navbar{
+  position: absolute;
+  top:0em;
+  color: #7b8083;
+
+}
+
+.navbar-nav{
+  padding-left: 60vw;  
+}
+
+.navbar-toggler{
+  margin-left: 60vw;  
+
+}
+
 .main{
   position: relative;
   padding: 0%;
@@ -39,7 +66,7 @@ body {
 }
 .maintext{
   position: absolute;
-	top: 6em;
+	top: 8em;
   padding-left: 10%;
 	width: 100%;
 	/* text-align: center; */
@@ -213,9 +240,17 @@ body {
   transform: translateY(0%);
 } */
 
+.card-title{
+  font-family: 'nbdunk', sans-serif;
+}
+
 #Projects{
   /* color: #fefeff; */
-  background-color: #403e54;
+  background-color: #f5f6f8;
+}
+
+.prjctrow{
+  margin: 0%;
 }
 
 
@@ -228,9 +263,28 @@ body {
   margin-bottom: 50px;
   text-shadow:1px;
   padding:12vh 0;
-  color: #fefeff;
+  color: #060606;
 }
 
 #Projects > .card-body{
-  background-color: #fefeff;
+  background-color: #fefeff
+}
+
+.prjhead{
+  color:#082431;
+}
+
+.skillsphere{
+  width: 100%;
+  height: 70vh;
+}
+
+.arthead{
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 85px;
+  letter-spacing: -1px;
+  padding-right: 0px;
+  margin-bottom: 50px;
+  color: #fff;
 }

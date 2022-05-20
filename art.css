@@ -1,0 +1,103 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap");
+
+
+/* --------------artcontainer-------------- */
+.artcontainer {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  perspective: 2000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ---------artslide--------- */
+.artcontainer .artslide {
+  width: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotation 20s infinite linear;
+}
+
+.artcontainer .artslide:hover {
+  animation-play-state: paused;
+}
+
+.artcontainer {
+    overflow-y: auto;
+  }
+
+  /* ---artslide--- */
+  /* Vertical Rotation Animation */
+  @keyframes rotation {
+    0% {
+      transform: rotateX(0deg);
+    }
+
+    100% {
+      transform: rotateX(-360deg);
+    }
+  }
+/* ---------Product Box--------- */
+.artcontainer .artslide .product-box {
+  max-width: 450px;
+  position: absolute;
+  background: #242837;
+
+  padding: 1rem;
+  border-radius: 0.3em;
+  margin: 0 1px;
+}
+
+  .artcontainer .artslide .product-box:nth-child(1) {
+    transform: rotateX(72deg) translateZ(400px);
+  }
+
+  .artcontainer .artslide .product-box:nth-child(2) {
+    transform: rotateX(144deg) translateZ(400px);
+  }
+
+  .artcontainer .artslide .product-box:nth-child(3) {
+    transform: rotateX(216deg) translateZ(400px);
+  }
+
+  .artcontainer .artslide .product-box:nth-child(4) {
+    transform: rotateX(288deg) translateZ(400px);
+  }
+
+  .artcontainer .artslide .product-box:nth-child(5) {
+    transform: rotateX(360deg) translateZ(400px);
+  }
+
+
+/* Image */
+.artcontainer .product-box .img {
+  max-width: 50vw;
+  max-height: 300px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.artcontainer .product-box:hover .img {
+  transform: scale(0.95);
+}
+
+.artcontainer .product-box .img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+@media (max-width: 550px) {
+  /* ---Product Box--- */
+  .artcontainer .artslide .product-box {
+    max-width: 250px;
+  }
+}
