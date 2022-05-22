@@ -1,3 +1,7 @@
+// import { p5 } from 'p5js-wrapper';
+
+// import  from 'p5'
+
 let abtmeart = function (sketch) {
 
     var x = 0;

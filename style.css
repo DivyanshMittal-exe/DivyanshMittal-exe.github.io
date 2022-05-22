@@ -6,6 +6,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&display=swap');
+
 @import './node_modules/sal.js/dist/sal.css';
 
 :root {
@@ -59,6 +61,13 @@ h1{
 
 }
 
+.navcont{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 0%;
+  width:100% !important;
+}
+
 .navbar-nav{
   margin-left: auto; 
 margin-right: 0; 
@@ -68,6 +77,10 @@ margin-right: 0;
   margin-left: auto; 
   margin-right: 0;
 
+}
+
+.nav-item{
+  font-size:1.2em;
 }
 
 .main{
@@ -199,7 +212,7 @@ margin-right: 0;
 
 .abtmeh{
   font-weight: 600;
-  font-size: 80px;
+  font-size:  5rem;
   line-height: 85px;
   letter-spacing: -1px;
   padding-right: 0px;
@@ -207,10 +220,10 @@ margin-right: 0;
 }
 
 .abtmetxt{
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
   font-weight: 300;
-  letter-spacing: 0.6px;
+  /* letter-spacing: 0.1rem; */
   
 }
 
@@ -227,6 +240,10 @@ margin-right: 0;
   line-height: 28px;
   font-weight: 400;
   letter-spacing: 0.6px;
+}
+
+.card-text{
+  font-size: 1.1em;
 }
 
 .skillcard
@@ -347,7 +364,9 @@ margin-right: 0;
 
 .skillsphere{
   width: 100%;
-  height: 70vh;
+  height: 0;
+  padding-bottom: 100%;
+  /* height: 70vh; */
 }
 
 .arthead{
@@ -400,6 +419,7 @@ margin-right: 0;
     margin-left: auto;
     margin-right: 0px;
     padding-right: 3em;
+    /* font-size:1.5em; */
   }
   .navbar{
     width: 97vw;
@@ -426,3 +446,20 @@ margin-right: 0;
 }
 
 /* width: 100% */
+
+
+.tagcloud{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  font-family: 'Archivo', sans-serif;
+  font-weight:600;
+  font-size: 1.3em;
+  color:#FCF7FF;
+}
+
+.tagcloud--item:hover{
+  color:#FF8552;
+}
+

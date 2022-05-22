@@ -16,7 +16,10 @@
     "dat.gui": "^0.7.9",
     "gsap": "^3.10.4",
     "jquery": "^3.6.0",
+    "p5": "^1.4.1",
+    "requirejs": "^2.3.6",
     "sal.js": "^0.8.5",
+    "TagCloud": "^2.2.0",
     "three": "^0.140.2",
     "troika-three-text": "^0.46.4"
   }

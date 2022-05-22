@@ -127,7 +127,7 @@ switch (new Date().getDay()) {
     day = "saturday";
 }
 
-txts = ["ace", "amazing", "astonishing", "astounding", "awe-inspiring", "awesome", "badass", "beautiful", "bedazzling", "bee's knees", "best", "breathtaking", "brilliant", "cat's meow", "cat's pajamas", "classy", "cool", "dandy", "dazzling", "delightful", "divine", "doozie", "epic", "excellent", "exceptional", "exquisite", "extraordinary", "fabulous", "fantastic", "fantabulous", "fine", "finest", "first-class", "first-rate", "flawless", "funkadelic", "geometric", "glorious", "gnarly", "good", "grand", "great", "groovy", "groundbreaking", "hunky-dory", "impeccable", "impressive", "incredible", "kickass", "kryptonian", "laudable", "legendary", "lovely", "luminous", "magnificent", "majestic", "marvelous", "mathematical", "mind-blowing", "neat", "outstanding", "peachy", "perfect", "phenomenal", "pioneering", "polished", "posh", "praiseworthy", "premium", "priceless", "prime", "primo", "rad", "remarkable", "riveting", "sensational", "shining", "slick", "smashing", "solid", "spectacular", "splendid", "stellar", "striking", "stunning", "stupendous", "stylish", "sublime", "super", "super-duper", "super-excellent", "superb", "superior", "supreme", "sweet", "swell", "terrific", "tiptop", "top-notch", "transcendent", "tremendous", "ultimate", "unreal", "well-made", "wicked", "wonderful", "wondrous", "world-class"]
+const txts = ["ace", "amazing", "astonishing", "astounding", "awe-inspiring", "awesome", "badass", "beautiful", "bedazzling", "bee's knees", "best", "breathtaking", "brilliant", "cat's meow", "cat's pajamas", "classy", "cool", "dandy", "dazzling", "delightful", "divine", "doozie", "epic", "excellent", "exceptional", "exquisite", "extraordinary", "fabulous", "fantastic", "fantabulous", "fine", "finest", "first-class", "first-rate", "flawless", "funkadelic", "geometric", "glorious", "gnarly", "good", "grand", "great", "groovy", "groundbreaking", "hunky-dory", "impeccable", "impressive", "incredible", "kickass", "kryptonian", "laudable", "legendary", "lovely", "luminous", "magnificent", "majestic", "marvelous", "mathematical", "mind-blowing", "neat", "outstanding", "peachy", "perfect", "phenomenal", "pioneering", "polished", "posh", "praiseworthy", "premium", "priceless", "prime", "primo", "rad", "remarkable", "riveting", "sensational", "shining", "slick", "smashing", "solid", "spectacular", "splendid", "stellar", "striking", "stunning", "stupendous", "stylish", "sublime", "super", "super-duper", "super-excellent", "superb", "superior", "supreme", "sweet", "swell", "terrific", "tiptop", "top-notch", "transcendent", "tremendous", "ultimate", "unreal", "well-made", "wicked", "wonderful", "wondrous", "world-class"]
 
 let count = Math.floor(Math.random() * txts.length);
 let index = 0;
@@ -249,41 +249,41 @@ let removing = false;
 //   prldr.classList.add('finished')
 // })
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".perlinAni",{
-    scrollTrigger:{
-        trigger:"#AboutMe",
+// gsap.to(".perlinAni",{
+//     scrollTrigger:{
+//         trigger:"#AboutMe",
         
-        start: "10% 60%",
-        end: "10% 30%",
-        // toggleActions:"restart none none none",
-        scrub: 1,
-        // markers: true
-    },
-    y: "0"
+//         start: "10% 60%",
+//         end: "10% 30%",
+//         // toggleActions:"restart none none none",
+//         scrub: 1,
+//         // markers: true
+//     },
+//     y: "0"
     
-});
+// });
 
-gsap.to(".card",{
-  scrollTrigger:{
-      trigger:"#Projects",
+// gsap.to(".card",{
+//   scrollTrigger:{
+//       trigger:"#Projects",
       
-      start: "top 70%",
-      end: "5% 37%",
-      // toggleActions:"restart none none none",
-      scrub: 1,
-      // markers: true
-  },
-  y: "0",
-  // opacity:1,
-  // duration: 0.25,
-  stagger: { 
-    each: 0.1,
-    from: "center",
-    // grid: "auto",
-    // ease: "power2.inOut",
-    // repeat: -1 
-  }
+//       start: "top 70%",
+//       end: "5% 37%",
+//       // toggleActions:"restart none none none",
+//       scrub: 1,
+//       // markers: true
+//   },
+//   y: "0",
+//   // opacity:1,
+//   // duration: 0.25,
+//   stagger: { 
+//     each: 0.1,
+//     from: "center",
+//     // grid: "auto",
+//     // ease: "power2.inOut",
+//     // repeat: -1 
+//   }
   
-});
+// });
