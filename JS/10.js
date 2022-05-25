@@ -7,6 +7,9 @@ let abtmeart = function (sketch) {
     var x = 0;
     var y = 0;
     var spacing = 40;
+    var drawarray1;
+    var drawarray2;
+    let perc = 0;
 
     sketch.setup = function () {
         const canvas_div = document.getElementById('SideAni');
@@ -16,29 +19,34 @@ let abtmeart = function (sketch) {
         // let canvas = createCanvas(Width,Height );
         canvas.parent('SideAni');
         sketch.background('#1f1d2b');
+        drawarray1 = Array.from({length:(sketch.width/spacing) + 10}, () =>  Array.from({length:(sketch.height/spacing)+10}, () => (Math.floor(Math.random() * 1000))%2));
+        drawarray2 = Array.from({length:(sketch.width/spacing) + 10}, () =>  Array.from({length:(sketch.height/spacing)+10}, () => (Math.floor(Math.random() * 1000))%2));
     }
 
     sketch.draw = function () {
-        for (let index = 0; index < 20; index++) {
-            sketch.stroke('rgba(59, 254, 216,1)');
+        sketch.background('#1f1d2b');
+        if (window.innerWidth < 768) {
+            sketch.strokeWeight(Math.floor((sketch.width * y) / (100 * sketch.height)));
 
-            if (window.innerWidth < 768) {
-                sketch.strokeWeight(Math.floor((sketch.width * y) / (100 * sketch.height)));
+        } else {
+            sketch.strokeWeight(Math.floor(sketch.width / 150));
 
-            } else {
-                sketch.strokeWeight(Math.floor(sketch.width / 150));
+        }
+        // console.log(sketch.perc*sketch.width*sketch.height/(spacing*spacing))
 
-            }
-            Math.random(1) < 0.5 ? sketch.line(x, y, x + spacing, y + spacing) : sketch.line(x, y + spacing, x + spacing, y);
-            if (x > sketch.width) {
-                x = 0;
-                y += spacing;
-            } else {
-                x += spacing;
-            }
+        for (let i = 0; i < sketch.width/spacing; i++) {
+            for (let j = 0; j < sketch.height/spacing; j++) {
+                
+                if (j*sketch.width/spacing + i >  sketch.perc*sketch.width*sketch.height/(spacing*spacing)){
+                    
+                    sketch.stroke('rgba(1, 223, 179, 1)')
+                    drawarray1[i][j] ? sketch.line(i*spacing, j*spacing, i*spacing + spacing, j*spacing + spacing) : sketch.line(i*spacing, j*spacing + spacing, i*spacing + spacing, j*spacing);
+                }else{
+                    sketch.stroke('rgba(237, 106, 90, 1)')
+                    drawarray2[i][j] ? sketch.line(i*spacing, j*spacing, i*spacing + spacing, j*spacing + spacing) : sketch.line(i*spacing, j*spacing + spacing, i*spacing + spacing, j*spacing);
+                }
 
-            if (y > 1.1 * sketch.height) {
-                sketch.noLoop();
+                
             }
         }
     }
@@ -53,23 +61,55 @@ let abtmeart = function (sketch) {
         y = 0;
         sketch.loop()
     }
+
+    sketch.reroll = function(){
+        if(sketch.perc >=0 && sketch.perc <= 100){
+            
+            let a = sketch.perc*sketch.width*sketch.height/(spacing*spacing)
+            let j = Math.floor(a/(sketch.width/spacing))
+            let i = Math.floor( a - j * (sketch.width/spacing))
+
+            drawarray1[i][j] = Math.floor(Math.random() * 1000)%2
+            drawarray2[i][j] = Math.floor(Math.random() * 1000)%2
+        }
+    }
 }
 
+
+var abtart = new p5(abtmeart);
+
 function setabt() {
-    var abtart = new p5(abtmeart);
     const canvas_div = document.getElementById('SideAni');
     var Height = window.innerHeight
     var Width = canvas_div.offsetWidth;
 
     console.log("Hello")
     abtart.resizeCanvas(Width, Height);
-    // abtart.windowResized()
 
     abtart.loop()
 }
 
 
 setabt()
+
+
+const scroller = document.getElementById('AboutMe');
+
+
+
+window.addEventListener("scroll", function(){
+    
+    var rect = scroller.getBoundingClientRect();
+    // console.log(rect)
+    // if(rect.y < 0){
+        abtart.perc = (-rect.y/rect.height)*1.5
+        abtart.reroll()
+
+    // }
+    // console.log(rect.y/rect.height)
+    // console.log(abtart.perc)
+
+});
 
 
 

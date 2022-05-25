@@ -411,6 +411,11 @@ margin-right: 0;
   .abtmecol{
     padding: 20vh 5vw 0vh 5vw;
   }
+  #typing {
+    font-family: "Roboto Mono", monospace;
+    white-space: pre;
+    font-size: 1.3rem;
+  }
 
 }
 
@@ -463,3 +468,21 @@ margin-right: 0;
   color:#FF8552;
 }
 
+/* #AboutMe{
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+} */
+
+.gsapWrap{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gsapclass{
+  display: block;
+}
