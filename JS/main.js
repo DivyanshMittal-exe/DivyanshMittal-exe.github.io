@@ -103,3 +103,94 @@ window.addEventListener("resize", function(){
 });
 
 
+
+
+import gsap from "gsap";
+
+// get other plugins:
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+import ScrollToPlugin from "gsap/ScrollToPlugin"
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+// const panels = gsap.utils.toArray("#AboutMe");
+// let tween = gsap.to('#AboutMe', {
+// 	xPercent: 0,
+// 	ease: "none",
+// 	scrollTrigger: {
+// 		trigger: "#AboutMe",
+// 		pin: true,
+//         markers:true,
+// 		start: "top bottom",
+// 		scrub: 1,
+// 		snap: {
+// 			snapTo: 1 ,
+// 			inertia: false,
+// 			duration: {min: 0.1, max: 0.1}
+// 		},
+// 		end: 0
+// 	}
+// });
+
+
+
+/* Panels */
+// const panels = gsap.utils.toArray(".gsapclass");
+
+// console.log(panels.length)
+// let tween = gsap.to(panels, {
+// 	xPercent: -100 * ( panels.length - 1 ),
+// 	ease: "none",
+// 	scrollTrigger: {
+// 		trigger: "#main",
+// 		pin: true,
+// 		start: "top top",
+// 		scrub: 1,
+//         markers:true,
+// 		snap: {
+// 			snapTo: 1 / (panels.length - 1),
+// 			inertia: false,
+// 			duration: {min: 0.1, max: 0.1}
+// 		},
+// 		end: "bottom"
+// 	}
+// });
+
+
+
+// const scroller = document.getElementById('AboutMe');
+
+
+// window.addEventListener("scroll", function(){
+    
+//     let height = scroller.clientHeight;
+//     let scrollHeight = scroller.scrollHeight - height;
+//     let scrollTop = scroller.scrollTop;
+//     let percent = Math.floor(scrollTop / scrollHeight * 100);
+
+//     console.log(height)
+//     console.log(scrollHeight)
+// });
+
+/** code by webdevtrick ( https://webdevtrick.com ) **/
+// const updateScrollPercentage = function() { 
+//     const heightOfWindow = window.innerHeight,
+//         contentScrolled = window.pageYOffset,
+//         bodyHeight = document.body.offsetHeight,
+//         percentage = document.querySelector("[data-scrollPercentage] .percentage")
+//         percentageVal = document.querySelector("#percentage-value")
+
+//     if(bodyHeight - contentScrolled <= heightOfWindow) {
+//         percentageVal.textContent = percentage.style.width = "100%"
+//     }
+//     else {
+//         const total = bodyHeight - heightOfWindow,
+//             got = contentScrolled,
+//             percent = parseInt((got/total) * 100)
+//         percentageVal.textContent = percentage.style.width = percent + "%"
+//     }
+// }
+
+// window.addEventListener('scroll', updateScrollPercentage)
+
+
