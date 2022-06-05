@@ -1,0 +1,375 @@
+@import "bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Playfair+Display:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #faf2f0;
+}
+
+h1 {
+  font-weight: 600;
+  font-family: "Playfair Display";
+  /* font-size: 1em; */
+  color: #233172;
+  padding-bottom: 1em;
+}
+h2 {
+  font-weight: 400;
+  font-family: "Playfair Display";
+  font-size: 3em;
+  color: #233172;
+  /* padding-bottom: 1em;  */
+}
+
+h3 {
+  font-weight: 600;
+  font-family: "Playfair Display";
+  font-size: 1em;
+  color: #242424;
+}
+
+h4 {
+  font-weight: 400;
+  font-family: "Playfair Display";
+  font-size: 2em;
+  color: #233172;
+  /* padding-bottom: 1em;  */
+}
+
+p {
+  font-weight: 400;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1em;
+  line-height: 1.765em;
+  color: #6b6768;
+}
+li {
+  font-weight: 400;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9em;
+  /* line-height: 1.765em; */
+  color: #6b6768;
+}
+
+.progback {
+  position: fixed;
+  height: 50vh;
+  width: 100%;
+  background-color: #ab5232;
+  z-index: -1;
+}
+
+.resume-button {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9em;
+  /* line-height: 1.765em; */
+  color: #6b6768;
+}
+
+/* .maindiv{
+    height:100%;
+    width:100%;
+    float:left;
+    position: relative;
+
+} */
+
+.navrow {
+  height: 100vh;
+  width: 6vh;
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  /* float:left; */
+}
+.sidenav {
+  width: 100%;
+
+  background-color: #faf2f0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2vh;
+  /* padding: 6px 8px 6px 16px;s */
+  text-decoration: none;
+  font-size: 3.8vh;
+  color: #595959;
+  display: block;
+  /* width: 3vw; */
+}
+
+.sidenav a:hover {
+  color: #ab5232;
+}
+
+.content {
+  margin-left: 6vh;
+  padding: 12vmin;
+  min-height: 100vh;
+}
+
+.profdiv{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  background-image: url(/Assets/Images/fish.jpg);
+}
+
+
+.concol{
+  padding: 0 2%  ;
+}
+
+/* .profimg {
+  position: absolute;
+  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+} */
+
+.minhead {
+  font-weight: 600;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.3em;
+  /* line-height: 1.765em; */
+  color: #242424;
+}
+
+.left_prog {
+  text-align: right;
+  padding-right: 2vw;
+  position: relative;
+}
+
+.right_prog {
+  padding-left: 2vw;
+}
+
+.progline {
+  position: absolute;
+  right: 0;
+  top: calc(0.4em + 0.99vmax);
+  top: -webkit-calc(0.4em + 0.99vmax);
+  top: -moz-calc(0.4em + 0.99vmax);
+  top: -o-calc(0.4em + 0.99vmax);
+  width: 0.1vmax;
+  transform: translate(50%);
+  height: calc(100% - 0.99vmax + 5vh);
+  height: -webkit-calc(100% - 0.99vmax + 5vh);
+  height: -moz-calc(100% - 0.99vmax + 5vh);
+  height: -o-calc(100% - 0.99vmax + 5vh);
+  /* height: 100%; */
+  background-color: #d55121;
+  overflow: hidden;
+}
+
+.prog_l_top {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  /* bottom: 0; */
+  background-color: #595959;
+}
+
+.progcirc {
+  position: absolute;
+  right: 0;
+  height: 1vmax;
+  width: 1vmax;
+  border-radius: 50%;
+  transform: translate(50%, 0.4em);
+
+  background-color: #d55121;
+  /* box-shadow: inset 0 0 0 3px #000000; */
+  overflow: hidden;
+}
+
+.edu,
+.schol,
+.project,
+.skill,
+.contact {
+  /* min-height: 100vh; */
+  margin-left: 6vh;
+  padding: 5%;
+  padding-bottom: 0%;
+}
+
+.edu p,
+.schol p,
+.project p,
+.skill p,
+.contact p {
+  margin-bottom: 0.6em;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+.edu .minhead,
+.schol .minhead,
+.project .minhead,
+.skill .minhead,
+.contact .minhead {
+  font-size: 1em;
+}
+
+.edu .row,
+.schol .row,
+.project .row,
+.skill .row,
+.contact .row {
+  padding-bottom: 5vh;
+}
+
+.project .minhead a {
+  font-weight: 600;
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 0.6em;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #242424;
+}
+
+.project .minhead a:hover {
+  font-weight: 600;
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 0.6em;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #ab5232;
+}
+
+.project a:link {
+  text-decoration: none;
+}
+
+.project a:visited {
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: none;
+}
+
+.project a:active {
+  text-decoration: none;
+}
+
+.plainlink:link {
+  text-decoration: none;
+  color: #6b6768;
+}
+
+.plainlink:visited {
+  text-decoration: none;
+  color: #6b6768;
+}
+
+.plainlink:hover {
+  text-decoration: none;
+  color: #ab5232;
+}
+
+.plainlink:active {
+  text-decoration: none;
+  color: #ab5232;
+}
+
+.skillflex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex-grow: 1;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.skillbox {
+  /* flex: 1; */
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-items: center;
+}
+
+.skillsvg {
+  /* float: left; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.skillsvg svg {
+  height: 2em;
+  width: 2em;
+}
+
+.skilltext {
+  font-weight: 400;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1em;
+  /* line-height: 1.765em; */
+  color: #6b6768;
+}
+
+.contact .row {
+  padding: 2% 0;
+}
+
+/* #icon1,
+#icon2,
+#icon3,
+#icon4 {
+  font-size: 1.3rem;
+  margin-left: 2vh;
+  color: cornflowerblue;
+}
+#icon1:hover,
+#icon2:hover,
+#icon3:hover,
+#icon4:hover {
+  color: coral !important;
+} */
+
+.cntctico {
+  font-size: 3rem;
+  color: #242424;
+  padding-bottom: 6%;
+}
+
+.footico{
+  font-size: 2rem;
+  margin-left: 2vh;
+  color: cornflowerblue;
+}
+
+.footico:hover{
+  color: coral !important;
+}

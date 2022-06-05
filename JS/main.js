@@ -1,6 +1,8 @@
 
 // import sal from 'sal.js'
 
+import {FontAwesomeIcon} from "@fortawesome/fontawesome-free/js/all.js"
+
 import 'bootstrap'
 // import 'requirejs'
 import TagCloud from 'TagCloud';
@@ -62,7 +64,7 @@ var h = container.clientHeight;
 let r = Math.floor(Math.min(w,h)/2);
 
 
-const texts = ['C','C++','C#','Java','JavaScript','Python','Haskell','SML','Tensorflow','Keras','SDL','Bootstrap','HTML','CSS','Node.js','Unity','Photoshop','Illustrator','Blender','ML-Lex','ML-Yacc','Prolog','VHDL','NodeJS'];
+const texts = ['C','C++','C#','Java','JavaScript','Python','Haskell','SML','Tensorflow','Keras','SDL','Bootstrap','HTML','CSS','Unity','Photoshop','Illustrator','Blender','ML-Lex','ML-Yacc','Prolog','VHDL','NodeJS', 'Dart','Flutter','Django'];
 
 const options = {
     radius: r,

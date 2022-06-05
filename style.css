@@ -94,7 +94,7 @@ margin-right: 0;
 
 .vidbg{
   position: absolute;
-  /* object-fit: contain; */
+  object-fit: contain;
   /* top: 0; */
   top: 75% ;
   /* left: 0; */
