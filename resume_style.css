@@ -137,6 +137,7 @@ li {
   height: 100%;
   background-size: cover;
   overflow: hidden;
+  background-position: 40% top;
   background-image: url(/Assets/Images/fish.jpg);
 }
 
@@ -364,6 +365,11 @@ li {
   padding-bottom: 6%;
 }
 
+.cntctico:hover{
+  color: #ab5232;
+
+}
+
 .footico{
   font-size: 2rem;
   margin-left: 2vh;
@@ -372,4 +378,70 @@ li {
 
 .footico:hover{
   color: coral !important;
+}
+
+.progline_md{
+  display: none;
+}
+
+.progcirc_md{
+  display: none;
+}
+
+@media (max-width: 767px) { 
+  
+  .progline{
+    display: none;
+  }
+
+  .progcirc{
+    display: none;
+  }
+
+  .row{
+    position: relative;
+  }
+
+  .left_prog {
+    text-align: left;
+    padding-left: 4vw;
+    padding-right: 'auto';
+    position: relative;
+  }
+  .right_prog{
+    padding-left: 4vw;
+  }
+
+  .progline_md {
+    padding: 0;
+    display: block;
+    position: absolute;
+    left: 0vw ;
+    top: calc(0.4em + 0.99vmax);
+    top: -webkit-calc(0.4em + 0.99vmax);
+    top: -moz-calc(0.4em + 0.99vmax);
+    top: -o-calc(0.4em + 0.99vmax);
+    width: clamp(2px, 0.1vmax, 8px);
+    transform: translate(-50%);
+    height: 100%;
+    /* height: 100%; */
+    background-color: #d55121;
+    overflow: hidden;
+  }
+  
+  
+  .progcirc_md {
+    padding: 0;
+
+    display: block;
+    position: absolute;
+    left: 0 ;
+    height: clamp(8px, 2vmax, 32px);
+    width: clamp(8px, 2vmax, 32px);
+    border-radius: 50%;
+    transform: translate(-50%, 0.4em);
+  
+    background-color: #d55121;
+    overflow: hidden;
+  }
 }

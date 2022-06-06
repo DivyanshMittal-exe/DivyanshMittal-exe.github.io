@@ -68,8 +68,8 @@ function gsapCreate(el) {
       trigger: el,
       scrub: 1,
     //   markers:true,
-      start: "top 65%",
-      end: "bottom 65%"
+      start: "top 55%",
+      end: "bottom 55%"
     }
 })
 }
