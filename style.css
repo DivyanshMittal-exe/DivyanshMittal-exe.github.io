@@ -486,3 +486,24 @@ margin-right: 0;
 .gsapclass{
   display: block;
 }
+
+
+
+.blogButtonContainer{
+  text-align: center;
+}
+.blogButton{
+  display: inline-block;
+  padding: 10px 0;
+  width: 60%;
+  background-color: transparent;
+  border: 2px solid rgba(1, 223, 179, 1);
+  color: rgba(1, 223, 179, 1);
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.blogButton:hover {
+  color: rgba(237, 106, 90, 1);
+  border-color: rgba(237, 106, 90, 1);
+}
