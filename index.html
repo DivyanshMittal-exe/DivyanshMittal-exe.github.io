@@ -34,6 +34,44 @@
   </head>
 
   <body>
+
+
+    <!-- <script>
+
+      var just_open = false
+
+      document.addEventListener('click', function(event) {
+        var open_dialog  = document.querySelector('.dialog-open');
+        console.log("Inside Clicker")
+        if(just_open){
+          just_open = false
+          console.log(just_open)
+        } else if (!open_dialog.contains(event.target)) {
+          console.log("Closing")
+          open_dialog.classList.remove('dialog-open');
+          open_dialog.close();
+        }
+      });
+
+      function openDialog(button) {
+        var dialog = button.closest('.card').querySelector('dialog');
+        console.log("Opening")
+        dialog.showModal();
+        dialog.classList.add('dialog-open');
+        just_open = true
+      }
+
+      function closeDialog(button) {
+        var dialog = button.closest('dialog');
+        dialog.classList.remove('dialog-open');
+        dialog.close();
+      }
+ 
+
+
+
+    </script> -->
+
     <div class="container-fluid main" id="main">
       <!-- <canvas id="maintd">
 
@@ -192,6 +230,9 @@
           class="row prjctrow row-cols-1 row-cols-md-3"
           style="padding: 0 4vw 10vh 4vw"
         >
+
+
+
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="card m-2 h-100">
               <img
@@ -325,6 +366,119 @@
               </div>
             </div>
           </div>
+
+
+          <!--  -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card m-2 h-100">
+              <img
+                src="/Assets/Images/ai_alchemy.png"
+                class="card-img-top"
+                alt="Computer Chip"
+              />
+              <div class="card-body pe-3 d-flex align-items-end flex-column">
+                <div class="p-2">
+                  <h5 class="card-title">AI Alchemy</h5>
+                  <small class="text-muted">August 2022-December 2022</small>
+
+                  <p class="card-text">
+                    This was made as the course project for COL333- Introduction to Artificial Intelligence,
+                    under
+                    <a target="_blank" rel="noopener noreferrer" href="https://scholar.google.co.in/citations?user=Cgp-L2UAAAAJ&hl=en"
+                      >Prof. Rohan Paul</a
+                    >. The three different assignments delve into three distinct problem domains and develop intelligent agents capable of tackling complex challenges using a variety of techniques. Each assignment focuses on a unique topic, including search-based algorithms, game playing, and probabilistic reasoning, offering a comprehensive exploration of different facets of AI.
+
+
+                  </p>
+                </div>
+                <div class="mt-auto w-100">
+                  <div class="row">
+                    <div class="col-md-6 m-0">
+                      <a target="_blank" rel="noopener noreferrer" class="btn btn-primary w-100" href="https://github.com/sachit393/COL-333" role="button">
+                        <i class="fa-brands fa-github"></i> Code
+                      </a>
+                    </div>
+
+                    <div class="col-md-6 m-0">
+                      <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#COL331Modal">
+                        <i class="fa-solid fa-cog"></i> Know More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+
+                    
+                  
+              </div>
+            </div>
+          </div>
+          
+          <!-- Modal for the above -->
+          <div class="modal fade" id="COL331Modal" tabindex="-1" aria-labelledby="COL331ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="COL331ModalLongTitle">AI Alchemy
+                  </h2>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  
+
+                  <div class="container px-4 py-5" id="hanging-icons">
+                    
+                    <div class="row g-4 py-5 row-cols-1 row-cols-lg-1">
+                      <div class="col d-flex align-items-start">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                        </div>
+                        <div>
+                          <h3 class="fs-2"> Error Correction using Search-based Techniques:</h3>
+                          <p>In the first assignment, we tackle the intriguing problem of error correction in digitized text. With the increasing use of OCR (Optical Character Recognition) systems to transform handwritten paper records into digital format, errors in the extracted text are inevitable. Our objective is to design a search-based algorithm that can identify and rectify these errors, ensuring the accuracy of the digitized information. To achieve this, we employ a cost function based on language fluency, evaluating the likelihood of different corrections. By exploring the vast space of possible corrections and considering character replacement possibilities using a given error matrix, our algorithm aims to find the most probable correction for a given input sentence.</p>
+
+                    
+                        </div>
+                      </div>
+                      <div class="col d-flex align-items-start">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+                        </div>
+                        <div>
+                          <h3 class="fs-2">Connect-4 Game Playing AI Agent</h3>
+                          <p>In the second assignment, we embark on an adventure into the realm of game playing AI agents. We focus on developing a formidable agent capable of playing a strategic two-player game—specifically, an extended version of the popular game Connect4. While the original Connect4 involves players placing tokens vertically in a grid, our extended version introduces additional moves called "PopOut Moves," allowing players to remove bottom-most tokens from specific columns. Our AI agent's mission is to plan its moves within a specified time limit, carefully considering the possible moves and their consequences. We begin by implementing an expectimax agent, pitting it against a random agent, and then refine its abilities using techniques like minimax search and alpha-beta pruning to challenge and defeat an adversarial agent.</p>
+
+                        </div>
+                      </div>
+                      <div class="col d-flex align-items-start">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
+                        </div>
+                        <div>
+                          <h3 class="fs-2">Probabilistic Reasoning for Vehicle Localization</h3>
+                          <p>In the third assignment, we venture into the realm of probabilistic reasoning, focusing on the captivating domain of vehicle localization. Imagine an autonomous car equipped with a noisy sensor that measures the relative distance between the autonomous vehicle and other cars in its vicinity. Our goal is to develop an algorithm that can estimate a probability distribution (belief) over the possible locations of other vehicles based on the sensor data collected over time. To achieve this, we harness the power of probabilistic trackers, employing a particle filter approach to estimate the current position of each car. Furthermore, we create a planner for the autonomous car, enabling it to navigate safely by utilizing the estimated belief to avoid collisions with other cars and obstacles.</p>
+
+                        </div>
+                        
+                        
+                      </div>
+                      <div class="col d-flex align-items-start">
+                        <p>These assignments provide an immersive learning experience, allowing you to delve into the multifaceted world of AI. By working on these projects, you will gain practical knowledge and hands-on experience in developing intelligent agents that can solve real-world problems. From search-based techniques for error correction to game-playing strategies and probabilistic reasoning for vehicle localization, these assignments encompass a diverse range of topics that form the foundation of artificial intelligence. Get ready to embark on this captivating journey and expand your AI expertise.</p>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="card m-2 h-100">
@@ -864,5 +1018,6 @@
     <script type="module" src="/JS/main.js"></script>
     <script type="module" src="/JS/10.js"></script>
     <script type="module" src="/JS/footer.js"></script>
+
   </body>
 </html>

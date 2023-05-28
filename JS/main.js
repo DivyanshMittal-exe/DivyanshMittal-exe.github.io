@@ -196,3 +196,13 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 // window.addEventListener('scroll', updateScrollPercentage)
 
 
+function openDialog(button) {
+    var dialog = button.closest('.card').querySelector('dialog');
+    dialog.showModal();
+}
+    
+function closeDialog(button) {
+    var dialog = button.closest('dialog');
+    dialog.close();
+}
+    
